@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <!-- Landing de ejemplo (evento y artistas ficticios). Fotos de Unsplash, uso libre.
@@ -44,6 +44,11 @@
         </div>
       </div>
     </section>
+
+    <!-- Banda de artistas en movimiento (decorativa; el texto se repite dos veces para que el giro no se corte) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span>Luna Volcán</span><span>Dalia Neón</span><span>Coral</span><span>Bruma</span><span>Sonido Mazorca</span><span>Fuego Lento</span><span>Club Tiburón</span><span>Las Gaviotas</span><span>Nadia Sur</span><span>Arrecife</span><span>Mango Club</span><span>Marisma</span><span>Luna Volcán</span><span>Dalia Neón</span><span>Coral</span><span>Bruma</span><span>Sonido Mazorca</span><span>Fuego Lento</span><span>Club Tiburón</span><span>Las Gaviotas</span><span>Nadia Sur</span><span>Arrecife</span><span>Mango Club</span><span>Marisma</span></div>
+    </div>
 
     <!-- ========== Cartel ========== -->
     <section class="section" id="cartel" aria-labelledby="cartel-title">
@@ -193,6 +198,7 @@
     <a class="btn btn--sun" href="#boletos" tabindex="-1">Comprar</a>
   </div>
 
+  <script src="../../assets/motion.js"></script>
   <script>
     // Cuenta regresiva
     const cd = document.querySelector('.countdown');
@@ -203,18 +209,38 @@
       for (const [u, ms] of Object.entries(units)) {
         const n = Math.floor(left / ms);
         left -= n * ms;
-        cd.querySelector(`[data-u="${u}"]`).textContent = String(n).padStart(2, '0');
+        const el = cd.querySelector(`[data-u="${u}"]`);
+        const v = String(n).padStart(2, '0');
+        if (el.textContent === v) continue;
+        el.textContent = v;
+        // El número nuevo cae desde arriba
+        el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick');
       }
     };
     tick();
     setInterval(tick, 1000);
 
-    // Pestañas del cartel
+    // Pestañas del cartel (los nombres del día elegido entran uno tras otro)
     const tabs = document.querySelectorAll('.day');
     tabs.forEach(tab => tab.addEventListener('click', () => {
       tabs.forEach(t => { t.classList.toggle('is-active', t === tab); t.setAttribute('aria-selected', t === tab); });
-      document.querySelectorAll('.lineup').forEach(l => { l.hidden = l.dataset.day !== tab.dataset.day; });
+      document.querySelectorAll('.lineup').forEach(l => {
+        l.hidden = l.dataset.day !== tab.dataset.day;
+        if (!l.hidden) [...l.children].forEach((li, i) => { li.style.animationDelay = i * 40 + 'ms'; li.classList.remove('in'); void li.offsetWidth; li.classList.add('in'); });
+      });
     }));
+
+    // Efectos al bajar
+    motion.reveal('.eyebrow, .h2, .sub, .days, .addon, .outro-title, .outro .btn');
+    motion.stagger('.headliners, .lineup:not([hidden]), .facts, .tickets, .howto, .faq');
+    motion.count('.facts strong');
+    // La barra de "vendido" se llena al verla
+    const meter = document.querySelector('.meter span');
+    if (meter && !motion.calm) {
+      const fill = meter.style.width;
+      meter.style.width = '0%';
+      new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { o.disconnect(); setTimeout(() => meter.style.width = fill, 400); } }, { threshold: 1 }).observe(meter);
+    }
 
     // Barra de compra
     const bar = document.querySelector('.buybar');

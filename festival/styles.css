@@ -413,7 +413,71 @@ img { display: block; max-width: 100%; }
   .faq { max-width: 760px; }
 }
 
+/* ---------- Animaciones ---------- */
+/* Portada: la foto se acerca lento y el título sube letra por bloque */
+.hero { overflow: hidden; }
+.hero-bg { animation: zoom 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes zoom { from { scale: 1.15; } }
+.hero-date, .title, .lead, .countdown, .hero-actions { animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.hero-date { animation-delay: 0.15s; }
+.title { animation-delay: 0.25s; }
+.lead { animation-delay: 0.4s; }
+.countdown { animation-delay: 0.5s; }
+.hero-actions { animation-delay: 0.6s; }
+@keyframes rise { from { opacity: 0; translate: 0 30px; } }
+.topbar { animation: drop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s both; }
+@keyframes drop { from { opacity: 0; translate: 0 -100%; } }
+
+/* Cuenta regresiva: cada número nuevo cae */
+.countdown div { overflow: hidden; }
+.countdown strong.tick { animation: tick 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes tick { from { translate: 0 -60%; opacity: 0; } }
+
+/* Banda de artistas (main recorta lo que sobra por estar inclinada) */
+main { overflow-x: clip; }
+.marquee {
+  overflow: hidden;
+  padding: 16px 0;
+  background: var(--sun);
+  color: #170a03;
+  rotate: -2deg;
+  margin: -14px -10px 0;
+  position: relative;
+  z-index: 2;
+}
+.marquee-track { display: flex; width: max-content; animation: slide 38s linear infinite; }
+.marquee span {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.marquee span::after { content: "✺"; margin: 0 0.9em; font-weight: 400; }
+@keyframes slide { to { translate: -50% 0; } }
+
+/* Artistas: la foto se acerca al pasar el mouse */
+.headliner img { transition: scale 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.headliner:hover img { scale: 1.06; }
+.lineup li.in { animation: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+/* Barra de vendido */
+.meter span { transition: width 1.4s cubic-bezier(0.6, 0, 0.2, 1); }
+
+/* Botón principal con brillo que pasa */
+.btn--sun { position: relative; overflow: hidden; isolation: isolate; }
+.btn--sun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.45) 50%, transparent 65%);
+  translate: -100% 0;
+  animation: shine 4s ease-in-out 2s infinite;
+}
+@keyframes shine { 30%, 100% { translate: 100% 0; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

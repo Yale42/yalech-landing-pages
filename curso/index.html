@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <!-- Landing de ejemplo (curso ficticio). Fotos de Unsplash, uso libre. -->
@@ -223,11 +223,37 @@
     <a class="btn btn--red" href="#precio" tabindex="-1">Inscribirme</a>
   </div>
 
+  <script src="../../assets/motion.js"></script>
   <script>
     // Antes / después
     const compare = document.querySelector('.compare');
     const range = compare.querySelector('.compare-range');
-    range.addEventListener('input', () => compare.style.setProperty('--pos', range.value + '%'));
+    let touched = false;
+    const setPos = v => { range.value = v; compare.style.setProperty('--pos', v + '%'); };
+    range.addEventListener('input', () => { touched = true; setPos(range.value); });
+    // La primera vez que se ve, la línea se mueve sola para enseñar que se puede deslizar
+    if (!motion.calm) new IntersectionObserver((e, o) => {
+      if (!e[0].isIntersecting) return;
+      o.disconnect();
+      const pasos = [[50, 22], [22, 78], [78, 50]];
+      let i = 0, t0 = null;
+      const step = now => {
+        if (touched || i >= pasos.length) return;
+        t0 ??= now;
+        const p = Math.min((now - t0) / 900, 1);
+        const ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        const [a, b] = pasos[i];
+        setPos(Math.round(a + (b - a) * ease));
+        if (p === 1) { i++; t0 = null; }
+        requestAnimationFrame(step);
+      };
+      setTimeout(() => requestAnimationFrame(step), 500);
+    }, { threshold: 0.6 }).observe(compare);
+
+    // Efectos al bajar
+    motion.reveal('.compare-head, .eyebrow, .h2, .teacher-img, .price, .guarantee');
+    motion.stagger('.weeks, .gallery, .reviews, .includes, .faq');
+    motion.count('.facts strong');
 
     // Barra de compra
     const bar = document.querySelector('.buybar');

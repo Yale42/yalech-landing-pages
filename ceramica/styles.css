@@ -372,7 +372,34 @@ em { font-style: normal; color: var(--clay); }
   .faq { max-width: 760px; }
 }
 
+/* ---------- Animaciones ---------- */
+/* Portada: el texto sube en cascada y la foto se descubre de abajo hacia arriba */
+.hero-text > * { animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.hero-text > :nth-child(2) { animation-delay: 0.08s; }
+.hero-text > :nth-child(3) { animation-delay: 0.16s; }
+.hero-text > :nth-child(4) { animation-delay: 0.24s; }
+.hero-text > :nth-child(5) { animation-delay: 0.32s; }
+@keyframes rise { from { opacity: 0; translate: 0 22px; } }
+.hero-media img { animation: unveil 1.3s cubic-bezier(0.7, 0, 0.2, 1) 0.2s both; }
+@keyframes unveil { from { clip-path: inset(100% 0 0 0 round var(--radius)); scale: 1.12; } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
+.tag { animation: rise 0.7s cubic-bezier(0.3, 1.3, 0.5, 1) 1.2s both, bob 4s ease-in-out 2s infinite alternate; }
+@keyframes bob { to { translate: 0 -5px; } }
+/* La barra de piezas se llena al abrir */
+.stock-bar span { animation: grow 1.6s cubic-bezier(0.6, 0, 0.2, 1) 0.6s both; transform-origin: left; }
+@keyframes grow { from { scale: 0 1; } }
+
+/* Fotos de las piezas: se acercan al pasar el mouse */
+.product img { transition: scale 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.product:hover img { scale: 1.05; }
+
+/* La frase: lo resaltado se subraya al aparecer */
+.quote em {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0% 2px no-repeat;
+  transition: background-size 1s cubic-bezier(0.6, 0, 0.2, 1) 0.6s;
+}
+.quote:not(.m-wait) em { background-size: 100% 2px; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
