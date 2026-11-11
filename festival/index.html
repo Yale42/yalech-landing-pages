@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Marea Fest 2027 · Puerto Escondido</title>
+  <meta name="description" content="Dos días de música frente al mar. 13 y 14 de marzo de 2027 en Puerto Escondido, Oaxaca." />
+  <meta name="theme-color" content="#0d0b10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <!-- Landing de ejemplo (evento y artistas ficticios). Fotos de Unsplash, uso libre.
+       Para cambiar la fecha de la cuenta regresiva, edita data-date en .countdown. -->
+
+  <header class="topbar">
+    <a class="logo" href="#">marea<span>27</span></a>
+    <a class="topbar-cta" href="#boletos">Boletos</a>
+  </header>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="Artista con los brazos arriba frente al público al atardecer" />
+      <div class="hero-inner">
+        <p class="hero-date">13—14 marzo 2027<br />Puerto Escondido, Oax.</p>
+        <h1 class="title">Marea</h1>
+        <p class="lead">Dos días de música frente al mar. 24 artistas, 2 escenarios y el atardecer más bonito del Pacífico.</p>
+
+        <div class="countdown" data-date="2027-03-13T16:00:00-06:00" aria-label="Cuenta regresiva">
+          <div><strong data-u="d">--</strong><span>días</span></div>
+          <div><strong data-u="h">--</strong><span>horas</span></div>
+          <div><strong data-u="m">--</strong><span>min</span></div>
+          <div><strong data-u="s">--</strong><span>seg</span></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn--sun" href="#boletos">Comprar boletos</a>
+          <a class="btn btn--ghost" href="#cartel">Ver cartel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cartel ========== -->
+    <section class="section" id="cartel" aria-labelledby="cartel-title">
+      <p class="eyebrow">Cartel</p>
+      <h2 class="h2" id="cartel-title">Quién toca</h2>
+
+      <ul class="headliners">
+        <li class="headliner">
+          <img src="assets/rojo.jpg" alt="Luna Volcán en el escenario con luz roja" loading="lazy" />
+          <div><span>Viernes</span><h3>Luna Volcán</h3></div>
+        </li>
+        <li class="headliner">
+          <img src="assets/azul.jpg" alt="Dalia Neón en el escenario con luz azul" loading="lazy" />
+          <div><span>Sábado</span><h3>Dalia Neón</h3></div>
+        </li>
+        <li class="headliner">
+          <img src="assets/humo.jpg" alt="Coral cantando entre humo" loading="lazy" />
+          <div><span>Sábado</span><h3>Coral</h3></div>
+        </li>
+      </ul>
+
+      <!-- Pestañas por día -->
+      <div class="days" role="tablist" aria-label="Día">
+        <button class="day is-active" role="tab" aria-selected="true" data-day="vie">Viernes 13</button>
+        <button class="day" role="tab" aria-selected="false" data-day="sab">Sábado 14</button>
+      </div>
+      <ul class="lineup" data-day="vie">
+        <li>Los Pájaros Mudos</li><li>Bruma</li><li>Sonido Mazorca</li><li>Nadia Sur</li>
+        <li>Club Tiburón</li><li>Marisma</li><li>Totem 77</li><li>Brisa Kid</li>
+        <li>Las Olas Raras</li><li>Peces de Colores</li><li>Ámbar</li>
+      </ul>
+      <ul class="lineup" data-day="sab" hidden>
+        <li>Fuego Lento</li><li>Las Gaviotas</li><li>Arrecife</li><li>Salitre</li>
+        <li>Mango Club</li><li>Noche Tropical</li><li>Río Rojo</li><li>Kiki Coral</li>
+        <li>Medusa</li><li>Los del Faro</li><li>Palma</li>
+      </ul>
+    </section>
+
+    <!-- ========== Experiencia ========== -->
+    <section class="vibe" aria-labelledby="vibe-title">
+      <img src="assets/playa.jpg" alt="Personas bailando en la playa al atardecer" loading="lazy" />
+      <div class="vibe-text">
+        <h2 class="h2" id="vibe-title">Arena en los pies hasta que salga el sol.</h2>
+      </div>
+    </section>
+    <section class="section section--tight">
+      <ul class="facts">
+        <li><strong>24</strong><span>artistas</span></li>
+        <li><strong>2</strong><span>escenarios</span></li>
+        <li><strong>18 h</strong><span>de música</span></li>
+        <li><strong>0 m</strong><span>al mar</span></li>
+      </ul>
+    </section>
+
+    <!-- ========== Boletos ========== -->
+    <section class="section" id="boletos" aria-labelledby="boletos-title">
+      <p class="eyebrow">Boletos</p>
+      <h2 class="h2" id="boletos-title">Elige tu acceso</h2>
+      <p class="sub">Precios por los dos días. Al llenarse cada fase, sube el precio.</p>
+
+      <div class="tickets">
+        <article class="ticket ticket--sold">
+          <div class="ticket-top"><h3>General · Fase 1</h3><span class="badge">Agotado</span></div>
+          <p class="ticket-price">$1,150</p>
+        </article>
+
+        <article class="ticket">
+          <div class="ticket-top"><h3>General · Fase 2</h3><span class="badge badge--hot">Quedan pocos</span></div>
+          <p class="ticket-price">$1,450 <small>MXN</small></p>
+          <div class="meter"><span style="width: 72%"></span></div>
+          <p class="meter-text">72% vendido</p>
+          <ul class="ticket-list">
+            <li>Acceso a los 2 escenarios</li>
+            <li>Pulsera para pagar sin efectivo</li>
+          </ul>
+          <a class="btn btn--sun btn--block" href="https://wa.me/520000000000?text=Hola,%20quiero%20boletos%20General%20para%20Marea" target="_blank" rel="noopener">Comprar General</a>
+        </article>
+
+        <article class="ticket ticket--vip">
+          <div class="ticket-top"><h3>VIP</h3><span class="badge">Cupo limitado</span></div>
+          <p class="ticket-price">$2,900 <small>MXN</small></p>
+          <ul class="ticket-list">
+            <li>Zona frente al escenario principal</li>
+            <li>Barra y baños exclusivos</li>
+            <li>Entrada rápida y camastro en la playa</li>
+          </ul>
+          <a class="btn btn--light btn--block" href="https://wa.me/520000000000?text=Hola,%20quiero%20boletos%20VIP%20para%20Marea" target="_blank" rel="noopener">Comprar VIP</a>
+        </article>
+      </div>
+
+      <p class="addon"><i class="fa-solid fa-campground"></i><span>¿Te quedas? Agrega <strong>camping</strong> por $650 con regaderas y lockers.</span></p>
+    </section>
+
+    <!-- ========== Cómo llegar ========== -->
+    <section class="section" aria-labelledby="llegar-title">
+      <p class="eyebrow">Cómo llegar</p>
+      <h2 class="h2" id="llegar-title">Playa Bacocho, Puerto Escondido</h2>
+      <ul class="howto">
+        <li><i class="fa-solid fa-plane"></i><div><strong>En avión</strong><span>El aeropuerto está a 10 minutos. Vuelos directos desde CDMX.</span></div></li>
+        <li><i class="fa-solid fa-van-shuttle"></i><div><strong>Shuttle gratis</strong><span>Desde el centro y la Zicatela cada 20 minutos.</span></div></li>
+        <li><i class="fa-solid fa-bed"></i><div><strong>Hospedaje</strong><span>15% de descuento en hoteles aliados con tu boleto.</span></div></li>
+      </ul>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section" aria-labelledby="faq-title">
+      <p class="eyebrow">Preguntas</p>
+      <h2 class="h2" id="faq-title">Antes de ir</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Hay edad mínima?</summary>
+          <p>Es para mayores de 18 años. Lleva una identificación oficial.</p>
+        </details>
+        <details>
+          <summary>¿Puedo transferir mi boleto?</summary>
+          <p>Sí, hasta 48 horas antes del festival, sin costo.</p>
+        </details>
+        <details>
+          <summary>¿Qué puedo llevar?</summary>
+          <p>Bloqueador, sombrero, termo vacío para agua (hay recarga gratis) y una chamarra ligera para la noche.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa si llueve?</summary>
+          <p>El festival sigue. Si se cancela por clima, te devolvemos el 100% de tu boleto.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== Cierre ========== -->
+    <section class="outro">
+      <img src="assets/bengalas.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <div class="outro-text">
+        <p class="outro-title">Nos vemos en la arena.</p>
+        <a class="btn btn--sun" href="#boletos">Comprar boletos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Marea Fest · Evento de ejemplo</span>
+    <a href="../../">Diseño de yalech →</a>
+  </footer>
+
+  <!-- Barra fija en celular -->
+  <div class="buybar" aria-hidden="true">
+    <span><small>Fase 2</small><strong>$1,450</strong></span>
+    <a class="btn btn--sun" href="#boletos" tabindex="-1">Comprar</a>
+  </div>
+
+  <script>
+    // Cuenta regresiva
+    const cd = document.querySelector('.countdown');
+    const target = new Date(cd.dataset.date).getTime();
+    const units = { d: 86400000, h: 3600000, m: 60000, s: 1000 };
+    const tick = () => {
+      let left = Math.max(0, target - Date.now());
+      for (const [u, ms] of Object.entries(units)) {
+        const n = Math.floor(left / ms);
+        left -= n * ms;
+        cd.querySelector(`[data-u="${u}"]`).textContent = String(n).padStart(2, '0');
+      }
+    };
+    tick();
+    setInterval(tick, 1000);
+
+    // Pestañas del cartel
+    const tabs = document.querySelectorAll('.day');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.toggle('is-active', t === tab); t.setAttribute('aria-selected', t === tab); });
+      document.querySelectorAll('.lineup').forEach(l => { l.hidden = l.dataset.day !== tab.dataset.day; });
+    }));
+
+    // Barra de compra
+    const bar = document.querySelector('.buybar');
+    const hero = document.querySelector('.hero');
+    const tickets = document.querySelector('#boletos');
+    const topbar = document.querySelector('.topbar');
+    const update = () => {
+      const pastHero = hero.getBoundingClientRect().bottom < 0;
+      const t = tickets.getBoundingClientRect();
+      bar.classList.toggle('show', pastHero && !(t.top < innerHeight && t.bottom > 0));
+      topbar.classList.toggle('is-solid', scrollY > 40);
+    };
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  </script>
+</body>
+</html>
