@@ -11,6 +11,7 @@ Otros archivos:
 - `index.html` y `estilos.css` — portada con los ejemplos (mismo estilo que el catálogo principal).
 - `assets/motion.js` — efectos al bajar. `assets/cotizar.js` / `cotizar.css` — cotizador en 1 minuto (tu número de WhatsApp está al inicio de `cotizar.js`).
 - `assets/plantillas/` — capturas que usa la portada (si cambias un ejemplo, vuelve a tomar la suya).
+- `assets/carrusel.js` / `carrusel.css` — flechas, puntitos y una «probadita» para que se note que los ejemplos se deslizan en celular.
 - `404.html` — página de error. `_headers` — encabezados de seguridad (Netlify o Cloudflare Pages).
 
 El catálogo completo y el link en bio están en el repositorio `yalech-web-link-in-bio`. Los enlaces hacia allá usan
