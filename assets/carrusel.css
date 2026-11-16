@@ -27,6 +27,7 @@
 @keyframes rail-hint { 50% { translate: 5px -50%; } }
 
 .rail-ui { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 4px; padding: 0 20px; }
+.rail-ui[hidden] { display: none; }
 .rail-dots { display: flex; gap: 6px; }
 .rail-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 99px; background: var(--rail-dot, rgba(0, 0, 0, 0.2)); cursor: pointer; transition: width 0.3s ease, background 0.3s ease; }
 .rail-dots button.is-on { width: 22px; background: var(--rail-ink, #0e0f10); }

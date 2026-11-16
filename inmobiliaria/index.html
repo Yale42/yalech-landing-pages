@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Arbórea · Casas en Mérida norte</title>
+  <meta name="description" content="Casas de 3 recámaras con jardín en privada con alberca y casa club, al norte de Mérida. Desde $3,450,000. Agenda tu visita." />
+  <meta name="theme-color" content="#f2efe9" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arbórea · Casas en Mérida norte" />
+  <meta property="og:description" content="Casas de 3 recámaras con jardín, alberca y casa club. Desde $3,450,000." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Landing de ejemplo (desarrollo ficticio). Fotos de Unsplash, uso libre.
+       Para cambiar el número de WhatsApp, busca "520000000000" (aparece también en el script del final).
+       Los precios de los modelos están en el atributo data-precio de cada uno. -->
+
+  <header class="topbar">
+    <a class="logo" href="#">Arbórea</a>
+    <a class="topbar-cta" href="#visita">Agendar visita</a>
+  </header>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-img" src="assets/hero.jpg" alt="Fachada de casa moderna de dos pisos con ventanales y jardín" />
+      <div class="hero-text">
+        <p class="kicker">Privada residencial · Mérida norte</p>
+        <h1 class="title">Una casa con jardín, <em>a 10 minutos de todo.</em></h1>
+        <p class="price-tag"><small>Desde</small> $3,450,000</p>
+        <ul class="specs">
+          <li><i class="fa-solid fa-bed"></i> 3 recámaras</li>
+          <li><i class="fa-solid fa-bath"></i> 2.5 baños</li>
+          <li><i class="fa-solid fa-ruler-combined"></i> 186 m²</li>
+          <li><i class="fa-solid fa-car"></i> 2 autos</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn--light" href="#visita">Agendar visita</a>
+          <a class="btn btn--glass" href="#galeria">Ver fotos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Disponibilidad ========== -->
+    <section class="avail" aria-label="Casas disponibles">
+      <div class="avail-inner">
+        <p><strong>Quedan 7</strong> de 32 casas · Entrega en diciembre 2027</p>
+        <div class="avail-bar"><span style="width: 78%"></span></div>
+      </div>
+    </section>
+
+    <!-- ========== Galería ========== -->
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="section-head">
+        <h2 class="h2" id="galeria-title">Por dentro</h2>
+        <p class="swipe">Desliza →</p>
+      </div>
+      <ul class="gallery">
+        <li class="g"><img src="assets/sala.jpg" alt="Sala con sillón café, alfombra y escalera blanca" loading="lazy" /><span>Sala con doble altura</span></li>
+        <li class="g"><img src="assets/cocina-isla.jpg" alt="Cocina con isla de cuarzo y bancos de madera" loading="lazy" /><span>Cocina con isla</span></li>
+        <li class="g"><img src="assets/recamara.jpg" alt="Recámara principal con cama, buró y lámpara" loading="lazy" /><span>Recámara principal</span></li>
+        <li class="g"><img src="assets/alberca.jpg" alt="Alberca privada con terraza y vegetación" loading="lazy" /><span>Alberca (modelo Jacaranda)</span></li>
+        <li class="g"><img src="assets/cocina.jpg" alt="Cocina y comedor blancos y luminosos" loading="lazy" /><span>Cocina y comedor integrados</span></li>
+      </ul>
+    </section>
+
+    <!-- ========== Modelos ==========
+         Cada modelo es un <article>. Cambia data-precio (sin comas) si cambia el precio:
+         lo usa la calculadora de mensualidades. -->
+    <section class="section" id="modelos" aria-labelledby="modelos-title">
+      <h2 class="h2" id="modelos-title">Dos modelos, <em>un mismo jardín</em></h2>
+      <p class="sub">Ambos en terreno de 10 × 20 m, con acabados de piedra, madera y cancelería negra.</p>
+
+      <div class="models">
+        <article class="model" data-modelo="Ceiba" data-precio="3450000">
+          <header>
+            <h3>Ceiba</h3>
+            <p class="model-price">$3,450,000</p>
+          </header>
+          <dl>
+            <div><dt>Construcción</dt><dd>186 m²</dd></div>
+            <div><dt>Recámaras</dt><dd>3</dd></div>
+            <div><dt>Baños</dt><dd>2.5</dd></div>
+            <div><dt>Estacionamiento</dt><dd>2 autos</dd></div>
+            <div><dt>Extra</dt><dd>Terraza techada</dd></div>
+          </dl>
+          <a class="btn btn--line" href="#visita" data-elegir="Ceiba">Quiero visitar este</a>
+        </article>
+        <article class="model model--top" data-modelo="Jacaranda" data-precio="4120000">
+          <span class="badge">Con alberca</span>
+          <header>
+            <h3>Jacaranda</h3>
+            <p class="model-price">$4,120,000</p>
+          </header>
+          <dl>
+            <div><dt>Construcción</dt><dd>224 m²</dd></div>
+            <div><dt>Recámaras</dt><dd>3 + estudio</dd></div>
+            <div><dt>Baños</dt><dd>3.5</dd></div>
+            <div><dt>Estacionamiento</dt><dd>2 autos</dd></div>
+            <div><dt>Extra</dt><dd>Alberca privada</dd></div>
+          </dl>
+          <a class="btn btn--olive" href="#visita" data-elegir="Jacaranda">Quiero visitar este</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Calculadora ========== -->
+    <section class="section" aria-labelledby="calc-title">
+      <div class="calc">
+        <div class="calc-text">
+          <h2 class="h2" id="calc-title">¿Cuánto pagaría al mes?</h2>
+          <p class="sub">Mueve los valores y mira un estimado con crédito bancario.</p>
+        </div>
+        <form class="calc-form" id="calc">
+          <fieldset class="field">
+            <legend>Modelo</legend>
+            <div class="seg">
+              <label><input type="radio" name="modelo" value="Ceiba" checked /><span>Ceiba</span></label>
+              <label><input type="radio" name="modelo" value="Jacaranda" /><span>Jacaranda</span></label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span>Enganche: <output id="eng-out">20%</output> <small id="eng-monto"></small></span>
+            <input type="range" name="enganche" min="10" max="50" step="5" value="20" />
+          </label>
+          <fieldset class="field">
+            <legend>Plazo</legend>
+            <div class="seg">
+              <label><input type="radio" name="plazo" value="10" /><span>10 años</span></label>
+              <label><input type="radio" name="plazo" value="15" /><span>15 años</span></label>
+              <label><input type="radio" name="plazo" value="20" checked /><span>20 años</span></label>
+            </div>
+          </fieldset>
+          <div class="calc-result" aria-live="polite">
+            <p>Mensualidad estimada</p>
+            <strong id="mensualidad">—</strong>
+            <small>Con tasa fija de 10.5% anual. Es un ejemplo: tu banco te dará la cifra exacta. También aceptamos Infonavit y Fovissste.</small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Amenidades ========== -->
+    <section class="section" aria-labelledby="amen-title">
+      <div class="amen-wrap">
+        <img src="assets/club.jpg" alt="Alberca de la casa club rodeada de jardín y camastros" loading="lazy" />
+        <div>
+          <h2 class="h2" id="amen-title">La privada</h2>
+          <ul class="amen">
+            <li><i class="fa-solid fa-person-swimming"></i>Alberca y casa club</li>
+            <li><i class="fa-solid fa-tree"></i>Parque central de 2,000 m²</li>
+            <li><i class="fa-solid fa-shield-halved"></i>Seguridad 24/7</li>
+            <li><i class="fa-solid fa-dumbbell"></i>Gimnasio al aire libre</li>
+            <li><i class="fa-solid fa-bicycle"></i>Ciclovía interior</li>
+            <li><i class="fa-solid fa-dog"></i>Área para mascotas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Ubicación ========== -->
+    <section class="section" aria-labelledby="ubic-title">
+      <h2 class="h2" id="ubic-title">Todo cerca</h2>
+      <p class="sub">Sobre la carretera a Progreso, en la zona que más está creciendo de Mérida.</p>
+      <ul class="near">
+        <li><strong class="num">5</strong><span>min</span><p>Plaza comercial y supermercado</p></li>
+        <li><strong class="num">8</strong><span>min</span><p>Escuelas y universidades</p></li>
+        <li><strong class="num">10</strong><span>min</span><p>Hospital y Periférico</p></li>
+        <li><strong class="num">25</strong><span>min</span><p>Playa de Progreso</p></li>
+      </ul>
+    </section>
+
+    <!-- ========== Agendar visita ==========
+         El formulario no envía nada a ningún servidor: arma un mensaje y abre WhatsApp. -->
+    <section class="section" id="visita" aria-labelledby="visita-title">
+      <div class="visit">
+        <div class="visit-text">
+          <h2 class="h2" id="visita-title">Ven a conocer <em>tu casa</em></h2>
+          <p class="sub">Recorre la casa muestra con un asesor. Dura unos 45 minutos y te llevas planos y precios por escrito.</p>
+          <p class="visit-where"><i class="fa-solid fa-location-dot"></i><span>Oficina de ventas: Carretera Mérida–Progreso km 12<small>Lunes a sábado, 9:00 a 18:00</small></span></p>
+        </div>
+        <form class="form" id="form-visita" novalidate>
+          <label class="field">
+            <span>Modelo</span>
+            <select name="modelo">
+              <option value="Ceiba">Ceiba · $3,450,000</option>
+              <option value="Jacaranda">Jacaranda · $4,120,000</option>
+              <option value="Los dos">Quiero ver los dos</option>
+            </select>
+          </label>
+          <div class="row">
+            <label class="field">
+              <span>Día</span>
+              <input type="date" name="dia" required />
+            </label>
+            <label class="field">
+              <span>Hora</span>
+              <select name="hora">
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>16:00</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span>¿Cómo piensas pagar?</span>
+            <select name="pago">
+              <option>Aún no sé</option>
+              <option>Crédito bancario</option>
+              <option>Infonavit</option>
+              <option>Fovissste</option>
+              <option>De contado</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" maxlength="40" autocomplete="name" placeholder="Ej. Roberto Canul" required />
+          </label>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button class="btn btn--olive btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Agendar mi visita</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section" aria-labelledby="faq-title">
+      <h2 class="h2" id="faq-title">Preguntas</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Con cuánto aparto?</summary>
+          <p>Con $20,000, reembolsables durante los primeros 15 días si cambias de opinión.</p>
+        </details>
+        <details>
+          <summary>¿Aceptan Infonavit o Fovissste?</summary>
+          <p>Sí, y también créditos bancarios y cofinanciamientos. Nuestro asesor te ayuda con el trámite sin costo.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto es el mantenimiento?</summary>
+          <p>$1,800 al mes. Incluye seguridad, jardines, alberca de la casa club y alumbrado.</p>
+        </details>
+        <details>
+          <summary>¿Puedo personalizar mi casa?</summary>
+          <p>Mientras esté en obra, puedes elegir pisos, cocina y closets de un catálogo de acabados.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Arbórea · Desarrollo de ejemplo</span>
+    <a href="../">Diseño de yalech →</a>
+  </footer>
+
+  <!-- Barra fija en celular: aparece al pasar la portada y se oculta en la sección de visita -->
+  <div class="buybar" aria-hidden="true">
+    <span><strong>Quedan 7</strong> casas</span>
+    <a class="btn btn--olive" href="#visita" tabindex="-1">Agendar visita</a>
+  </div>
+
+  <script src="../assets/motion.js"></script>
+  <script>
+    // Número de WhatsApp del desarrollo (código de país + número, sin espacios ni signos)
+    const WHATSAPP = '520000000000';
+
+    // Efectos al bajar
+    motion.reveal('.section-head, .h2, .sub, .amen-wrap img');
+    motion.stagger('.gallery, .models, .amen, .near, .faq');
+    motion.count('.num');
+
+    const pesos = n => n.toLocaleString('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
+
+    // ---------- Calculadora de mensualidad ----------
+    const TASA = 0.105; // anual, solo para el ejemplo
+    const precios = {};
+    document.querySelectorAll('.model').forEach(m => { precios[m.dataset.modelo] = Number(m.dataset.precio); });
+    const calc = document.getElementById('calc');
+    const calcular = () => {
+      const precio = precios[calc.modelo.value] || precios.Ceiba;
+      const eng = Math.min(50, Math.max(10, Number(calc.enganche.value) || 20));
+      const anios = [10, 15, 20].includes(Number(calc.plazo.value)) ? Number(calc.plazo.value) : 20;
+      const prestamo = precio * (1 - eng / 100);
+      const r = TASA / 12, n = anios * 12;
+      const pago = prestamo * r / (1 - Math.pow(1 + r, -n));
+      document.getElementById('eng-out').textContent = eng + '%';
+      document.getElementById('eng-monto').textContent = '(' + pesos(precio * eng / 100) + ')';
+      document.getElementById('mensualidad').textContent = pesos(Math.round(pago / 100) * 100);
+      calc.enganche.style.setProperty('--p', ((eng - 10) / 40 * 100) + '%');
+    };
+    calc.addEventListener('input', calcular);
+    calc.addEventListener('submit', e => e.preventDefault());
+    calcular();
+
+    // ---------- Agendar visita por WhatsApp ----------
+    const form = document.getElementById('form-visita');
+    const error = document.getElementById('form-error');
+    const opciones = sel => [...sel.options].map(o => o.value);
+
+    // "Quiero visitar este": deja elegido el modelo en el formulario y en la calculadora
+    document.querySelectorAll('[data-elegir]').forEach(a => a.addEventListener('click', () => {
+      const m = a.dataset.elegir;
+      if (opciones(form.modelo).includes(m)) form.modelo.value = m;
+    }));
+
+    // Las visitas son desde mañana y hasta 45 días después (fecha local de la persona)
+    const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    const manana = new Date(Date.now() + 864e5);
+    form.dia.min = iso(manana);
+    form.dia.max = iso(new Date(Date.now() + 45 * 864e5));
+    form.dia.value = iso(manana);
+
+    // Limpia lo que escribe la persona: sin caracteres de control y con largo máximo
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const nombre = limpiar(form.nombre.value, 40);
+      const fecha = form.dia.value;
+      const ok = sel => opciones(sel).includes(sel.value);
+
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha) || fecha < form.dia.min || fecha > form.dia.max) return (error.textContent = 'Elige un día entre mañana y las próximas 6 semanas.');
+      if (!ok(form.modelo) || !ok(form.hora) || !ok(form.pago)) return (error.textContent = 'Revisa las opciones elegidas.');
+      if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu visita.'); }
+      error.textContent = '';
+
+      const [a, m, d] = fecha.split('-').map(Number);
+      const bonita = new Date(a, m - 1, d).toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
+      const modelo = form.modelo.value === 'Los dos' ? 'los dos modelos' : `el modelo ${form.modelo.value}`;
+      const msg = `Hola Arbórea, soy ${nombre}. Quiero visitar ${modelo} el ${bonita} a las ${form.hora.value}.\nForma de pago: ${form.pago.value}.`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+
+    // ---------- Barra fija en celular ----------
+    const bar = document.querySelector('.buybar');
+    const hero = document.querySelector('.hero');
+    const visita = document.querySelector('#visita');
+    const topbar = document.querySelector('.topbar');
+    const update = () => {
+      topbar.classList.toggle('is-solid', hero.getBoundingClientRect().bottom < 70);
+      const pastHero = hero.getBoundingClientRect().bottom < 0;
+      const r = visita.getBoundingClientRect();
+      bar.classList.toggle('show', pastHero && !(r.top < innerHeight && r.bottom > 0));
+    };
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  </script>
+</body>
+</html>

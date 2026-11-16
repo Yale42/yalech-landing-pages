@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Nácar · Clínica dental en Querétaro</title>
+  <meta name="description" content="Limpieza, ortodoncia, blanqueamiento e implantes en Querétaro. Primera valoración sin costo y hasta 12 meses sin intereses." />
+  <meta name="theme-color" content="#f7fbfa" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nácar · Clínica dental en Querétaro" />
+  <meta property="og:description" content="Primera valoración sin costo. Agenda tu cita por WhatsApp." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,500..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Landing de ejemplo (clínica ficticia). Fotos de Unsplash, uso libre.
+       Para cambiar el número de WhatsApp, busca "520000000000" (aparece también en el script del final). -->
+
+  <header class="topbar">
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span>nácar</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="topbar-cta" href="#agendar">Agendar cita</a>
+  </header>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker"><i class="fa-solid fa-gift"></i> Primera valoración sin costo</p>
+        <h1 class="title">Ir al dentista, <em>sin miedo.</em></h1>
+        <p class="lead">Te explicamos todo antes de empezar, con precios claros y sin sorpresas. Citas puntuales en el centro de Querétaro.</p>
+        <div class="hero-actions">
+          <a class="btn btn--teal" href="#agendar">Agendar mi valoración</a>
+          <a class="btn-link" href="#servicios">Ver precios <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <ul class="trust">
+          <li><strong>4.9 <i class="fa-solid fa-star"></i></strong><span>en Google</span></li>
+          <li><strong>12 años</strong><span>cuidando sonrisas</span></li>
+          <li><strong>12 MSI</strong><span>con tarjeta</span></li>
+        </ul>
+      </div>
+
+      <figure class="hero-media">
+        <img src="assets/hero.jpg" alt="Mujer sonriendo con dientes blancos y parejos" />
+        <figcaption class="float float--a"><i class="fa-solid fa-shield-heart"></i> Sin dolor, con anestesia suave</figcaption>
+        <p class="float float--b" aria-hidden="true"><i class="fa-regular fa-clock"></i> Tu cita empieza a tiempo</p>
+      </figure>
+    </section>
+
+    <!-- ========== Servicios ==========
+         Cada servicio es un <li>. El botón "Agendar" elige ese servicio en el formulario de abajo. -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <h2 class="h2" id="servicios-title">Tratamientos y precios</h2>
+      <p class="sub">Precios de referencia. En tu valoración te damos un presupuesto exacto y por escrito.</p>
+
+      <ul class="services">
+        <li class="service">
+          <i class="fa-solid fa-tooth"></i>
+          <h3>Limpieza dental</h3>
+          <p>Con ultrasonido y pulido. Incluye revisión.</p>
+          <p class="from">$650</p>
+          <a class="service-cta" href="#agendar" data-servicio="Limpieza dental">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="service">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Blanqueamiento</h3>
+          <p>En consultorio, en una sola cita de 90 minutos.</p>
+          <p class="from">$3,200</p>
+          <a class="service-cta" href="#agendar" data-servicio="Blanqueamiento">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="service service--star">
+          <span class="badge">El más pedido</span>
+          <i class="fa-solid fa-face-smile-beam"></i>
+          <h3>Ortodoncia</h3>
+          <p>Brackets o alineadores transparentes. Mensualidades fijas.</p>
+          <p class="from"><small>desde</small> $1,200<small>/mes</small></p>
+          <a class="service-cta" href="#agendar" data-servicio="Ortodoncia">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="service">
+          <i class="fa-solid fa-paintbrush"></i>
+          <h3>Resinas</h3>
+          <p>Del color de tu diente. Adiós a las amalgamas.</p>
+          <p class="from"><small>desde</small> $900</p>
+          <a class="service-cta" href="#agendar" data-servicio="Resinas">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="service">
+          <i class="fa-solid fa-crown"></i>
+          <h3>Implantes</h3>
+          <p>Titanio con corona de porcelana. Garantía de 5 años.</p>
+          <p class="from"><small>desde</small> $14,500</p>
+          <a class="service-cta" href="#agendar" data-servicio="Implantes">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="service">
+          <i class="fa-solid fa-children"></i>
+          <h3>Niños</h3>
+          <p>Odontopediatra con mucha paciencia (y premios).</p>
+          <p class="from"><small>desde</small> $550</p>
+          <a class="service-cta" href="#agendar" data-servicio="Consulta para niños">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== Primera cita ========== -->
+    <section class="section" aria-labelledby="pasos-title">
+      <div class="steps-wrap">
+        <div>
+          <h2 class="h2" id="pasos-title">Así es tu primera cita</h2>
+          <p class="sub">Dura unos 40 minutos y no tiene costo. Sales sabiendo qué necesitas y cuánto cuesta.</p>
+          <img class="steps-img" src="assets/consulta.jpg" alt="Dentista platicando con una paciente sentada en el sillón" loading="lazy" />
+        </div>
+        <ol class="steps">
+          <li><span class="n">1</span><div><h3>Platicamos</h3><p>Nos cuentas qué te molesta o qué te gustaría mejorar.</p></div></li>
+          <li><span class="n">2</span><div><h3>Revisamos</h3><p>Exploración completa y radiografía digital, con 90% menos radiación.</p></div></li>
+          <li><span class="n">3</span><div><h3>Te explicamos</h3><p>Ves en pantalla lo que encontramos y tus opciones, de la más sencilla a la más completa.</p></div></li>
+          <li><span class="n">4</span><div><h3>Tú decides</h3><p>Te llevas tu presupuesto por escrito. Sin presión.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== Cifras ========== -->
+    <section class="stats-band">
+      <ul class="stats">
+        <li><strong class="num">6,400</strong><span>pacientes atendidos</span></li>
+        <li><strong class="num">12</strong><span>años en Querétaro</span></li>
+        <li><strong class="num">98%</strong><span>nos recomienda</span></li>
+      </ul>
+    </section>
+
+    <!-- ========== Equipo ========== -->
+    <section class="section" id="equipo" aria-labelledby="equipo-title">
+      <div class="team">
+        <img class="team-photo" src="assets/doctor.jpg" alt="Retrato del Dr. Andrés Salinas sonriendo" loading="lazy" />
+        <div class="team-text">
+          <p class="eyebrow">Quién te atiende</p>
+          <h2 class="h2" id="equipo-title">Dr. Andrés Salinas</h2>
+          <p class="role">Cirujano dentista · Especialista en ortodoncia</p>
+          <p>Estudió en la UNAM y se especializó en ortodoncia en la UAQ. Lo que más disfruta es ver la cara de sus pacientes el día que se quitan los brackets.</p>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> Cédula profesional 0000000 (ejemplo)</li>
+            <li><i class="fa-solid fa-check"></i> Esterilización en autoclave en cada cita</li>
+            <li><i class="fa-solid fa-check"></i> Equipo de 4 especialistas</li>
+          </ul>
+        </div>
+      </div>
+      <img class="clinic" src="assets/consultorio.jpg" alt="Consultorio dental luminoso con sillón naranja" loading="lazy" />
+    </section>
+
+    <!-- ========== Opiniones ========== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <h2 class="h2" id="reviews-title">Pacientes que perdieron el miedo</h2>
+      <div class="reviews">
+        <blockquote class="review">
+          <p>“No iba al dentista desde hace 8 años por miedo. Aquí me explicaron todo y no me dolió nada.”</p>
+          <footer><img src="assets/p-mariana.jpg" alt="" loading="lazy" /><span><strong>Mariana G.</strong>Limpieza y resinas</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Me puse alineadores y en 11 meses quedé. Las mensualidades fijas me salvaron.”</p>
+          <footer><img src="assets/p-kevin.jpg" alt="" loading="lazy" /><span><strong>Kevin T.</strong>Ortodoncia</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Llegué con dolor un sábado y me atendieron ese mismo día. Súper puntuales.”</p>
+          <footer><img src="assets/p-omar.jpg" alt="" loading="lazy" /><span><strong>Omar R.</strong>Urgencia</span></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========== Agendar ==========
+         El formulario no envía nada a ningún servidor: arma un mensaje y abre WhatsApp. -->
+    <section class="section" id="agendar" aria-labelledby="agendar-title">
+      <div class="book">
+        <div class="book-text">
+          <h2 class="h2" id="agendar-title">Agenda tu valoración gratis</h2>
+          <p class="sub">Elige qué necesitas y cuándo te queda mejor. Te respondemos por WhatsApp con los horarios libres.</p>
+          <ul class="pay">
+            <li><i class="fa-regular fa-credit-card"></i> Hasta 12 meses sin intereses</li>
+            <li><i class="fa-solid fa-file-invoice"></i> Facturamos</li>
+            <li><i class="fa-solid fa-umbrella"></i> Aceptamos seguros de gastos médicos</li>
+          </ul>
+        </div>
+
+        <form class="form" id="form-cita" novalidate>
+          <label class="field">
+            <span>¿Qué necesitas?</span>
+            <select name="servicio" required>
+              <option value="Valoración general">Valoración general</option>
+              <option value="Limpieza dental">Limpieza dental</option>
+              <option value="Blanqueamiento">Blanqueamiento</option>
+              <option value="Ortodoncia">Ortodoncia</option>
+              <option value="Resinas">Resinas</option>
+              <option value="Implantes">Implantes</option>
+              <option value="Consulta para niños">Consulta para niños</option>
+              <option value="Tengo una urgencia">Tengo una urgencia</option>
+            </select>
+          </label>
+          <fieldset class="field">
+            <legend>¿Qué días te quedan?</legend>
+            <div class="seg">
+              <label><input type="radio" name="dias" value="entre semana" checked /><span>Lun a vie</span></label>
+              <label><input type="radio" name="dias" value="sábado" /><span>Sábado</span></label>
+              <label><input type="radio" name="dias" value="cualquier día" /><span>Cualquiera</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>¿En qué horario?</legend>
+            <div class="seg">
+              <label><input type="radio" name="turno" value="en la mañana" checked /><span>Mañana</span></label>
+              <label><input type="radio" name="turno" value="en la tarde" /><span>Tarde</span></label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" maxlength="40" autocomplete="name" placeholder="Ej. Laura Méndez" required />
+          </label>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button class="btn btn--teal btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Pedir mi cita</button>
+          <p class="form-note"><i class="fa-solid fa-truck-medical"></i> ¿Urgencia con dolor? <a href="tel:+520000000000">Llámanos</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section" id="preguntas" aria-labelledby="faq-title">
+      <h2 class="h2" id="faq-title">Preguntas frecuentes</h2>
+      <div class="faq">
+        <details>
+          <summary>¿De verdad la valoración no cuesta?</summary>
+          <p>De verdad. Incluye revisión y radiografía digital. Solo pagas si decides hacer algún tratamiento.</p>
+        </details>
+        <details>
+          <summary>¿Duele?</summary>
+          <p>Usamos anestesia con aguja muy delgada y gel previo. La mayoría de nuestros pacientes dicen que fue menos de lo que esperaban.</p>
+        </details>
+        <details>
+          <summary>¿Atienden urgencias?</summary>
+          <p>Sí, de lunes a sábado. Si tienes dolor, llámanos y te hacemos espacio ese mismo día.</p>
+        </details>
+        <details>
+          <summary>¿Cómo puedo pagar?</summary>
+          <p>Efectivo, transferencia o tarjeta. Con tarjeta de crédito participante, hasta 12 meses sin intereses en tratamientos desde $3,000.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== Ubicación ========== -->
+    <section class="section">
+      <div class="visit">
+        <div>
+          <h2 class="h3">Estamos en el centro</h2>
+          <p>Av. Zaragoza 210, consultorio 4<br />Centro, Querétaro, Qro.</p>
+          <a class="btn-link" href="https://www.google.com/maps/search/?api=1&query=Centro%2C%20Quer%C3%A9taro" target="_blank" rel="noopener">Cómo llegar <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div>
+          <h2 class="h3">Horario</h2>
+          <p>Lunes a viernes: 9:00 – 20:00<br />Sábado: 9:00 – 14:00</p>
+          <p class="muted">Estacionamiento gratis para pacientes.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Nácar · Clínica de ejemplo</span>
+    <a href="../">Diseño de yalech →</a>
+  </footer>
+
+  <!-- Barra fija en celular: aparece al pasar la portada y se oculta en la sección de agendar -->
+  <div class="buybar" aria-hidden="true">
+    <span><strong>Valoración</strong> sin costo</span>
+    <a class="btn btn--teal" href="#agendar" tabindex="-1">Agendar</a>
+  </div>
+
+  <script src="../assets/motion.js"></script>
+  <script>
+    // Número de WhatsApp de la clínica (código de país + número, sin espacios ni signos)
+    const WHATSAPP = '520000000000';
+
+    // Efectos al bajar
+    motion.reveal('.h2, .sub, .steps-img, .team-photo, .clinic');
+    motion.stagger('.services, .steps, .stats, .reviews, .faq, .visit');
+    motion.count('.num');
+
+    const form = document.getElementById('form-cita');
+    const error = document.getElementById('form-error');
+    const SERVICIOS = [...form.servicio.options].map(o => o.value);
+
+    // "Agendar" en un servicio: lo deja elegido en el formulario
+    document.querySelectorAll('[data-servicio]').forEach(a => a.addEventListener('click', () => {
+      if (SERVICIOS.includes(a.dataset.servicio)) form.servicio.value = a.dataset.servicio;
+    }));
+
+    // Limpia lo que escribe la persona: sin caracteres de control y con largo máximo
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const servicio = form.servicio.value;
+      const dias = form.dias.value;
+      const turno = form.turno.value;
+      const nombre = limpiar(form.nombre.value, 40);
+
+      if (!SERVICIOS.includes(servicio)) return (error.textContent = 'Elige qué necesitas.');
+      if (!['entre semana', 'sábado', 'cualquier día'].includes(dias) || !['en la mañana', 'en la tarde'].includes(turno)) return (error.textContent = 'Elige día y horario.');
+      if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu cita.'); }
+      error.textContent = '';
+
+      const msg = `Hola Nácar, soy ${nombre}. Quiero agendar: ${servicio}.\nMe queda ${dias}, ${turno}.`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+
+    // Barra fija en celular
+    const bar = document.querySelector('.buybar');
+    const hero = document.querySelector('.hero');
+    const agendar = document.querySelector('#agendar');
+    const update = () => {
+      const pastHero = hero.getBoundingClientRect().bottom < 0;
+      const r = agendar.getBoundingClientRect();
+      bar.classList.toggle('show', pastHero && !(r.top < innerHeight && r.bottom > 0));
+    };
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  </script>
+</body>
+</html>
