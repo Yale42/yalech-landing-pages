@@ -20,12 +20,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=1" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <!-- Landing de ejemplo (marca ficticia). Fotos de Unsplash, uso libre.
-       Para cambiar el número de WhatsApp, busca "wa.me/520000000000" y reemplázalo. -->
+       Para cambiar el número de WhatsApp, edita WHATSAPP al inicio del script de la bolsa (al final). -->
 
   <header class="topbar">
     <a class="logo" href="#">terrón</a>
@@ -58,7 +58,8 @@
     </section>
 
     <!-- ========== Colección ==========
-         Cada pieza es un <li>. El botón abre WhatsApp con el nombre de la pieza ya escrito. -->
+         Cada pieza es un <li> con data-id, data-nombre y data-precio (sin comas). «Agregar» la mete a la bolsa;
+         para una pieza agotada usa la clase product--sold y un <span> en lugar del botón. -->
     <section class="section" id="coleccion" aria-labelledby="coleccion-title">
       <div class="section-head">
         <h2 class="h2" id="coleccion-title">La colección</h2>
@@ -66,7 +67,7 @@
       </div>
 
       <ul class="products">
-        <li class="product">
+        <li class="product" data-id="taza-nube" data-nombre="Taza Nube" data-precio="420">
           <img src="assets/apiladas.jpg" alt="Cuatro tazas blancas apiladas" loading="lazy" />
           <div class="product-info">
             <div class="product-top">
@@ -74,10 +75,10 @@
               <p class="product-price">$420</p>
             </div>
             <p class="product-meta">350 ml · Gres con esmalte mate</p>
-            <a class="btn btn--line" href="https://wa.me/520000000000?text=Hola,%20quiero%20la%20Taza%20Nube" target="_blank" rel="noopener">Pedir <i class="fa-brands fa-whatsapp"></i></a>
+            <button class="btn btn--line" type="button" data-agregar="taza-nube" aria-label="Agregar Taza Nube a la bolsa"><i class="fa-solid fa-plus"></i> Agregar</button>
           </div>
         </li>
-        <li class="product">
+        <li class="product" data-id="par-granito" data-nombre="Par Granito" data-precio="780">
           <img src="assets/par.jpg" alt="Dos tazas moteadas sobre una mesa blanca" loading="lazy" />
           <div class="product-info">
             <div class="product-top">
@@ -85,10 +86,10 @@
               <p class="product-price">$780</p>
             </div>
             <p class="product-meta">2 tazas de 300 ml · Esmalte moteado</p>
-            <a class="btn btn--line" href="https://wa.me/520000000000?text=Hola,%20quiero%20el%20Par%20Granito" target="_blank" rel="noopener">Pedir <i class="fa-brands fa-whatsapp"></i></a>
+            <button class="btn btn--line" type="button" data-agregar="par-granito" aria-label="Agregar Par Granito a la bolsa"><i class="fa-solid fa-plus"></i> Agregar</button>
           </div>
         </li>
-        <li class="product">
+        <li class="product" data-id="bowl-arena" data-nombre="Bowl Arena" data-precio="390">
           <img src="assets/bowl.jpg" alt="Bowl blanco sobre un plato" loading="lazy" />
           <div class="product-info">
             <div class="product-top">
@@ -96,10 +97,10 @@
               <p class="product-price">$390</p>
             </div>
             <p class="product-meta">16 cm · Ideal para ramen o cereal</p>
-            <a class="btn btn--line" href="https://wa.me/520000000000?text=Hola,%20quiero%20el%20Bowl%20Arena" target="_blank" rel="noopener">Pedir <i class="fa-brands fa-whatsapp"></i></a>
+            <button class="btn btn--line" type="button" data-agregar="bowl-arena" aria-label="Agregar Bowl Arena a la bolsa"><i class="fa-solid fa-plus"></i> Agregar</button>
           </div>
         </li>
-        <li class="product">
+        <li class="product" data-id="vajilla-lago" data-nombre="Vajilla Lago" data-precio="1650">
           <img src="assets/platos.jpg" alt="Platos y bowls azules apilados en una repisa" loading="lazy" />
           <div class="product-info">
             <div class="product-top">
@@ -107,10 +108,10 @@
               <p class="product-price">$1,650</p>
             </div>
             <p class="product-meta">Para 2 · Platos, bowls y tazas</p>
-            <a class="btn btn--line" href="https://wa.me/520000000000?text=Hola,%20quiero%20la%20Vajilla%20Lago" target="_blank" rel="noopener">Pedir <i class="fa-brands fa-whatsapp"></i></a>
+            <button class="btn btn--line" type="button" data-agregar="vajilla-lago" aria-label="Agregar Vajilla Lago a la bolsa"><i class="fa-solid fa-plus"></i> Agregar</button>
           </div>
         </li>
-        <li class="product">
+        <li class="product" data-id="jarron-duna" data-nombre="Jarrón Duna" data-precio="650">
           <img style="--focus: center 85%" src="assets/jarron.jpg" alt="Jarrones blancos junto a una tela de lino" loading="lazy" />
           <div class="product-info">
             <div class="product-top">
@@ -118,7 +119,7 @@
               <p class="product-price">$650</p>
             </div>
             <p class="product-meta">22 cm · Sin esmalte por fuera</p>
-            <a class="btn btn--line" href="https://wa.me/520000000000?text=Hola,%20quiero%20el%20Jarr%C3%B3n%20Duna" target="_blank" rel="noopener">Pedir <i class="fa-brands fa-whatsapp"></i></a>
+            <button class="btn btn--line" type="button" data-agregar="jarron-duna" aria-label="Agregar Jarrón Duna a la bolsa"><i class="fa-solid fa-plus"></i> Agregar</button>
           </div>
         </li>
         <li class="product product--sold">
@@ -202,7 +203,7 @@
       <div class="faq">
         <details>
           <summary>¿Cómo hago mi pedido?</summary>
-          <p>Toca “Pedir” en la pieza que quieras y te escribimos por WhatsApp para confirmar tu dirección y el pago.</p>
+          <p>Toca “Agregar” en las piezas que quieras, abre tu bolsa y envíanos el pedido por WhatsApp. Te escribimos para confirmar tu dirección y el pago.</p>
         </details>
         <details>
           <summary>¿Cómo pago?</summary>
@@ -240,6 +241,43 @@
     <a class="btn btn--clay" href="#coleccion" tabindex="-1">Ver colección</a>
   </div>
 
+  <!-- Bolsa: barra que aparece al agregar algo y ventana con el pedido -->
+  <button class="bagbar" type="button" hidden>
+    <span class="bagbar-icon"><i class="fa-solid fa-bag-shopping"></i><b data-bag-count>0</b></span>
+    <span class="bagbar-text">Tu bolsa · <strong data-bag-total>$0</strong></span>
+    <span class="bagbar-cta">Ver pedido <i class="fa-solid fa-arrow-right"></i></span>
+  </button>
+
+  <dialog class="bag" aria-labelledby="bag-title">
+    <form class="bag-inner" novalidate>
+      <div class="bag-head">
+        <h2 id="bag-title">Tu bolsa</h2>
+        <button type="button" class="bag-x" data-bag-close aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="bag-list"></ul>
+      <p class="bag-empty">Tu bolsa está vacía.</p>
+      <fieldset class="field">
+        <legend>¿Cómo te la entregamos?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="entrega" value="envio" checked /><span>Envío a domicilio · $150</span></label>
+          <label class="chip"><input type="radio" name="entrega" value="taller" /><span>Recoger en el taller · gratis</span></label>
+        </div>
+      </fieldset>
+      <label class="field">
+        <span>Tu nombre</span>
+        <input type="text" name="nombre" maxlength="40" autocomplete="given-name" placeholder="Para apartar tus piezas" />
+      </label>
+      <dl class="bag-sum">
+        <div><dt>Piezas</dt><dd data-sum-piezas>$0</dd></div>
+        <div><dt>Entrega</dt><dd data-sum-envio>$0</dd></div>
+        <div class="bag-total"><dt>Total</dt><dd data-sum-total>$0</dd></div>
+      </dl>
+      <p class="form-error" role="alert"></p>
+      <button class="btn btn--clay" type="submit">Pedir por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+      <p class="bag-note">Cada pieza es única: te apartamos las tuyas 24 horas mientras confirmas el pago.</p>
+    </form>
+  </dialog>
+
   <script src="../assets/motion.js"></script>
   <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=1" data-ejemplo="Producto"></script>
@@ -248,6 +286,96 @@
     motion.reveal('.section-head, .h2, .sub, .quote, .outro-title, .outro .btn');
     motion.stagger('.products, .steps, .perks, .reviews, .faq');
 
+    // ---------- Bolsa de compra ----------
+    const WHATSAPP = '520000000000'; // ← número de la tienda (52 + 10 dígitos)
+    const ENVIO = 150;
+    const MAX = 3; // piezas iguales por pedido (son tandas pequeñas)
+    const ENTREGAS = { envio: 'Envío a domicilio', taller: 'Recoger en el taller' };
+    const piezas = new Map([...document.querySelectorAll('.product[data-id]')].map(li =>
+      [li.dataset.id, { nombre: li.dataset.nombre, precio: Number(li.dataset.precio) }]));
+    const bolsa = new Map(); // id → cantidad
+    const bagbar = document.querySelector('.bagbar');
+    const dlg = document.querySelector('.bag');
+    const form = dlg.querySelector('form');
+    const lista = dlg.querySelector('.bag-list');
+    const error = dlg.querySelector('.form-error');
+    const pesos = n => '$' + n.toLocaleString('es-MX');
+    const subtotal = () => [...bolsa].reduce((t, [id, n]) => t + piezas.get(id).precio * n, 0);
+    const cuantas = () => [...bolsa.values()].reduce((t, n) => t + n, 0);
+    const envio = () => (form.entrega.value === 'envio' && bolsa.size ? ENVIO : 0);
+
+    const pintar = () => {
+      lista.replaceChildren(...[...bolsa].map(([id, n]) => {
+        const p = piezas.get(id);
+        const li = document.createElement('li');
+        li.className = 'bag-item';
+        li.innerHTML = `<div><strong></strong><span></span></div>
+          <div class="stepper">
+            <button type="button" data-paso="-1"></button><output></output><button type="button" data-paso="1">+</button>
+          </div>`;
+        li.querySelector('strong').textContent = p.nombre;
+        li.querySelector('span').textContent = pesos(p.precio * n);
+        li.querySelector('output').textContent = n;
+        const menos = li.querySelector('[data-paso="-1"]');
+        menos.textContent = n === 1 ? '×' : '−';
+        menos.setAttribute('aria-label', n === 1 ? `Quitar ${p.nombre} de la bolsa` : `Quitar una pieza de ${p.nombre}`);
+        const mas = li.querySelector('[data-paso="1"]');
+        mas.setAttribute('aria-label', `Agregar otra pieza de ${p.nombre}`);
+        mas.disabled = n >= MAX;
+        menos.addEventListener('click', () => cambiar(id, -1));
+        mas.addEventListener('click', () => cambiar(id, 1));
+        return li;
+      }));
+      dlg.querySelector('.bag-empty').hidden = bolsa.size > 0;
+      dlg.querySelector('[data-sum-piezas]').textContent = pesos(subtotal());
+      dlg.querySelector('[data-sum-envio]').textContent = envio() ? pesos(envio()) : 'Gratis';
+      dlg.querySelector('[data-sum-total]').textContent = pesos(subtotal() + envio());
+      bagbar.querySelector('[data-bag-count]').textContent = cuantas();
+      bagbar.querySelector('[data-bag-total]').textContent = pesos(subtotal());
+      bagbar.hidden = bolsa.size === 0;
+      document.body.classList.toggle('has-bag', bolsa.size > 0);
+      document.querySelectorAll('[data-agregar]').forEach(b => {
+        const n = bolsa.get(b.dataset.agregar) || 0;
+        b.classList.toggle('is-in', n > 0);
+        b.innerHTML = n ? `<i class="fa-solid fa-check"></i> En tu bolsa (${n})` : '<i class="fa-solid fa-plus"></i> Agregar';
+        const nombre = piezas.get(b.dataset.agregar)?.nombre || '';
+        b.setAttribute('aria-label', n ? `${nombre}: ${n} en tu bolsa. Abrir la bolsa` : `Agregar ${nombre} a la bolsa`);
+      });
+    };
+    const cambiar = (id, paso) => {
+      if (!piezas.has(id)) return;
+      const n = Math.min(MAX, (bolsa.get(id) || 0) + paso);
+      if (n <= 0) bolsa.delete(id); else bolsa.set(id, n);
+      pintar();
+    };
+
+    document.querySelectorAll('[data-agregar]').forEach(b => b.addEventListener('click', () => {
+      const id = b.dataset.agregar;
+      if (!bolsa.has(id)) cambiar(id, 1); else dlg.showModal(); // la segunda vez abre la bolsa
+      bagbar.classList.remove('pop'); void bagbar.offsetWidth; bagbar.classList.add('pop');
+    }));
+    bagbar.addEventListener('click', () => { error.textContent = ''; dlg.showModal(); });
+    dlg.querySelector('[data-bag-close]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    form.addEventListener('change', pintar);
+
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const nombre = limpiar(form.nombre.value, 40);
+      const entrega = ENTREGAS[form.entrega.value];
+      if (!bolsa.size) return (error.textContent = 'Agrega al menos una pieza.');
+      if (!entrega) return (error.textContent = 'Elige cómo te la entregamos.');
+      if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tus piezas.'); }
+      error.textContent = '';
+      const msg = `Hola Terrón, soy ${nombre}. Quiero pedir:\n`
+        + [...bolsa].map(([id, n]) => `• ${n} × ${piezas.get(id).nombre} (${pesos(piezas.get(id).precio * n)})`).join('\n')
+        + `\nEntrega: ${entrega}${envio() ? ` (${pesos(envio())})` : ''}\nTotal: ${pesos(subtotal() + envio())} MXN`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+    pintar();
+
     const bar = document.querySelector('.buybar');
     const hero = document.querySelector('.hero');
     const shop = document.querySelector('#coleccion');
@@ -255,7 +383,7 @@
       const pastHero = hero.getBoundingClientRect().bottom < 0;
       const s = shop.getBoundingClientRect();
       const atShop = s.top < innerHeight && s.bottom > 0;
-      bar.classList.toggle('show', pastHero && !atShop);
+      bar.classList.toggle('show', pastHero && !atShop && !bolsa.size);
     };
     addEventListener('scroll', update, { passive: true });
     addEventListener('resize', update);

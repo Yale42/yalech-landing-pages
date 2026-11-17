@@ -11,6 +11,7 @@ Cómo (una sola vez, en una carpeta aparte):
 Luego, desde la raíz del repo:
     ruta/a/venv/bin/python assets/iconos/actualizar.py ruta/a/package
 """
+import hashlib
 import pathlib
 import re
 import sys
@@ -60,8 +61,10 @@ def main(paquete: pathlib.Path) -> None:
         sub.populate(unicodes=unicodes)
         sub.subset(fuente)
         subset.save_font(fuente, str(SALIDA / destino), op)
+        # La versión cambia sola cuando cambia la fuente, para que el navegador no use una vieja
+        version = hashlib.sha1((SALIDA / destino).read_bytes()).hexdigest()[:8]
         caras.append(f"@font-face {{ font-family: '{familia}'; font-style: normal; font-weight: {peso}; "
-                     f"font-display: block; src: url(\"{destino}?v=1\") format(\"woff2\"); }}")
+                     f"font-display: block; src: url(\"{destino}?v={version}\") format(\"woff2\"); }}")
 
     reglas = '\n'.join(f'.{n}::before {{ content: "\\{codigos[n]}"; }}' for n in usados)
     (SALIDA / 'iconos.css').write_text(f"""/* Íconos: Font Awesome Free 6.5.1 (https://fontawesome.com), recortado a los que usa este sitio.

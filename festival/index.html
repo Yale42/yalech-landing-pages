@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=1" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <!-- Landing de ejemplo (evento y artistas ficticios). Fotos de Unsplash, uso libre.
@@ -134,7 +134,7 @@
             <li>Acceso a los 2 escenarios</li>
             <li>Pulsera para pagar sin efectivo</li>
           </ul>
-          <a class="btn btn--sun btn--block" href="https://wa.me/520000000000?text=Hola,%20quiero%20boletos%20General%20para%20Marea" target="_blank" rel="noopener">Comprar General</a>
+          <a class="btn btn--sun btn--block" href="#pedido" data-agregar="general">Agregar General</a>
         </article>
 
         <article class="ticket ticket--vip">
@@ -145,11 +145,52 @@
             <li>Barra y baños exclusivos</li>
             <li>Entrada rápida y camastro en la playa</li>
           </ul>
-          <a class="btn btn--light btn--block" href="https://wa.me/520000000000?text=Hola,%20quiero%20boletos%20VIP%20para%20Marea" target="_blank" rel="noopener">Comprar VIP</a>
+          <a class="btn btn--light btn--block" href="#pedido" data-agregar="vip">Agregar VIP</a>
         </article>
       </div>
 
       <p class="addon"><i class="fa-solid fa-campground"></i><span>¿Te quedas? Agrega <strong>camping</strong> por $650 con regaderas y lockers.</span></p>
+
+      <!-- Pedido: suma boletos y camping, muestra el total y arma el mensaje de WhatsApp.
+           Los precios salen de data-precio; si cambias uno aquí, cámbialo también en su tarjeta. -->
+      <form class="order" id="pedido" novalidate>
+        <h3 class="order-title">Arma tu pedido</h3>
+        <div class="order-items">
+        <div class="order-row" data-item="general" data-nombre="General" data-precio="1450">
+          <div><strong>General · Fase 2</strong><span>$1,450 c/u</span></div>
+          <div class="stepper">
+            <button type="button" data-paso="-1" aria-label="Quitar un boleto General">−</button>
+            <output aria-live="polite">0</output>
+            <button type="button" data-paso="1" aria-label="Agregar un boleto General">+</button>
+          </div>
+        </div>
+        <div class="order-row" data-item="vip" data-nombre="VIP" data-precio="2900">
+          <div><strong>VIP</strong><span>$2,900 c/u</span></div>
+          <div class="stepper">
+            <button type="button" data-paso="-1" aria-label="Quitar un boleto VIP">−</button>
+            <output aria-live="polite">0</output>
+            <button type="button" data-paso="1" aria-label="Agregar un boleto VIP">+</button>
+          </div>
+        </div>
+        <div class="order-row" data-item="camping" data-nombre="Camping" data-precio="650">
+          <div><strong><i class="fa-solid fa-campground"></i> Camping</strong><span>$650 por persona</span></div>
+          <div class="stepper">
+            <button type="button" data-paso="-1" aria-label="Quitar un lugar de camping">−</button>
+            <output aria-live="polite">0</output>
+            <button type="button" data-paso="1" aria-label="Agregar un lugar de camping">+</button>
+          </div>
+        </div>
+        </div>
+        <div class="order-side">
+        <p class="order-total"><span>Total</span><strong data-total>$0</strong></p>
+        <label class="field">
+          <span>Tu nombre</span>
+          <input type="text" name="nombre" maxlength="40" autocomplete="given-name" placeholder="A nombre de quién van los boletos" />
+        </label>
+        <p class="form-error" role="alert"></p>
+        <button class="btn btn--sun btn--block" type="submit">Pedir por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </form>
     </section>
 
     <!-- ========== Cómo llegar ========== -->
@@ -255,6 +296,53 @@
     }
 
     // Barra de compra
+    // ---------- Pedido de boletos ----------
+    const WHATSAPP = '520000000000'; // ← número del festival (52 + 10 dígitos)
+    const MAX = 10;
+    const pedido = document.querySelector('#pedido');
+    const filas = [...pedido.querySelectorAll('.order-row')];
+    const cant = {};
+    const pesos = n => '$' + n.toLocaleString('es-MX');
+    const pintar = () => {
+      let total = 0;
+      for (const f of filas) {
+        const n = cant[f.dataset.item] || 0;
+        f.querySelector('output').textContent = n;
+        f.querySelector('[data-paso="-1"]').disabled = n === 0;
+        f.querySelector('[data-paso="1"]').disabled = n === MAX;
+        f.classList.toggle('is-on', n > 0);
+        total += n * Number(f.dataset.precio);
+      }
+      pedido.querySelector('[data-total]').textContent = pesos(total);
+    };
+    const sumar = (item, paso) => {
+      if (!filas.some(f => f.dataset.item === item)) return;
+      cant[item] = Math.min(MAX, Math.max(0, (cant[item] || 0) + paso));
+      pintar();
+    };
+    filas.forEach(f => f.querySelectorAll('[data-paso]').forEach(b =>
+      b.addEventListener('click', () => sumar(f.dataset.item, Number(b.dataset.paso)))));
+    // «Agregar General / VIP» en las tarjetas: suma uno y baja al pedido
+    document.querySelectorAll('[data-agregar]').forEach(a => a.addEventListener('click', () => sumar(a.dataset.agregar, 1)));
+    pintar();
+
+    const error = pedido.querySelector('.form-error');
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    pedido.addEventListener('submit', e => {
+      e.preventDefault();
+      const nombre = limpiar(pedido.nombre.value, 40);
+      const lineas = filas.filter(f => cant[f.dataset.item] > 0);
+      if (!(cant.general > 0 || cant.vip > 0)) return (error.textContent = 'Agrega al menos un boleto General o VIP.');
+      if (nombre.length < 2) { pedido.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar los boletos.'); }
+      error.textContent = '';
+      const total = lineas.reduce((t, f) => t + cant[f.dataset.item] * Number(f.dataset.precio), 0);
+      const msg = `Hola, soy ${nombre}. Quiero boletos para Marea 2027:\n`
+        + lineas.map(f => `• ${cant[f.dataset.item]} × ${f.dataset.nombre} (${pesos(cant[f.dataset.item] * Number(f.dataset.precio))})`).join('\n')
+        + `\nTotal: ${pesos(total)} MXN`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+
     const bar = document.querySelector('.buybar');
     const hero = document.querySelector('.hero');
     const tickets = document.querySelector('#boletos');

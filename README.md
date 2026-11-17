@@ -3,9 +3,9 @@
 Muestrario de plantillas de landing pages de Yael González (@yalech). Cada ejemplo es un negocio ficticio, vive en su
 carpeta y se puede ver en vivo. Para un cliente real, copia la carpeta de la plantilla que eligió a un repositorio nuevo:
 
-- `curso/` — curso en línea (antes y después, temario, inscripción)
-- `festival/` — festival de música (cuenta regresiva, cartel, boletos)
-- `ceramica/` — tienda de cerámica (colección limitada, piezas que quedan)
+- `curso/` — curso en línea (antes y después, temario, inscripción con grupo y forma de pago)
+- `festival/` — festival de música (cuenta regresiva, cartel, pedido de boletos con total)
+- `ceramica/` — tienda de cerámica (colección limitada, piezas que quedan, bolsa de compra)
 - `restaurante/` — restaurante mexicano (menú por pestañas, abierto/cerrado en vivo, reservas por WhatsApp)
 - `dental/` — consultorio dental (precios, primera cita, agenda por WhatsApp)
 - `inmobiliaria/` — desarrollo de casas (galería, modelos, calculadora de mensualidad, visitas)

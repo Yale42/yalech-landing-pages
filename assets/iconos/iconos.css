@@ -1,9 +1,9 @@
 /* Íconos: Font Awesome Free 6.5.1 (https://fontawesome.com), recortado a los que usa este sitio.
  * Licencia: íconos CC BY 4.0, fuentes SIL OFL 1.1, código MIT. Copyright 2023 Fonticons, Inc.
  * Generado con assets/iconos/actualizar.py; no lo edites a mano. */
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=1") format("woff2"); }
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=1") format("woff2"); }
-@font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: block; src: url("brands.woff2?v=1") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=3bd10297") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=63be9db9") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: block; src: url("brands.woff2?v=27e3b55a") format("woff2"); }
 
 .fa-solid, .fa-regular, .fa-brands {
   -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
@@ -17,6 +17,7 @@
 .fa-arrow-down::before { content: "\f063"; }
 .fa-arrow-left::before { content: "\f060"; }
 .fa-arrow-right::before { content: "\f061"; }
+.fa-bag-shopping::before { content: "\f290"; }
 .fa-bath::before { content: "\f2cd"; }
 .fa-bed::before { content: "\f236"; }
 .fa-bicycle::before { content: "\f206"; }
@@ -51,6 +52,7 @@
 .fa-person-swimming::before { content: "\f5c4"; }
 .fa-phone::before { content: "\f095"; }
 .fa-plane::before { content: "\f072"; }
+.fa-plus::before { content: "\2b"; }
 .fa-rocket::before { content: "\f135"; }
 .fa-ruler-combined::before { content: "\f546"; }
 .fa-shield-halved::before { content: "\f3ed"; }

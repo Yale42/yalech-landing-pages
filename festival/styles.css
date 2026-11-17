@@ -293,6 +293,50 @@ img { display: block; max-width: 100%; }
 .addon i { flex: none; font-size: 1.2rem; color: var(--sun); }
 .addon strong { color: var(--sand); }
 
+/* Pedido */
+.order {
+  display: grid; gap: 4px; max-width: 620px; margin-top: 22px;
+  padding: 22px; border-radius: var(--radius);
+  background: var(--night-2); border: 1px solid var(--line);
+  scroll-margin-top: 90px;
+}
+.order-title { font-family: var(--display); font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+.order-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--line);
+}
+.order-row > div:first-child { display: grid; gap: 2px; min-width: 0; }
+.order-row strong { font-weight: 700; }
+.order-row strong i { color: var(--sun); margin-right: 4px; }
+.order-row span { font-size: 0.86rem; color: var(--muted); }
+.stepper { display: flex; align-items: center; gap: 4px; flex: none; }
+.stepper button {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--line); background: transparent; color: var(--sand);
+  font: inherit; font-size: 1.3rem; line-height: 1; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.stepper button:hover:not(:disabled) { border-color: var(--sun); }
+.stepper button:disabled { opacity: 0.35; cursor: default; }
+.stepper output { min-width: 28px; text-align: center; font-weight: 700; font-size: 1.1rem; }
+.order-row.is-on output { color: var(--sun); }
+.order-total { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0 10px; }
+.order-total span { color: var(--muted); font-weight: 600; }
+.order-total strong { font-family: var(--display); font-size: 1.9rem; font-weight: 700; }
+.order .field { display: grid; gap: 8px; margin-top: 4px; }
+.order .field > span { font-size: 0.9rem; font-weight: 700; }
+.order input[type="text"] {
+  width: 100%; padding: 14px 16px; border-radius: 12px;
+  border: 1px solid var(--line); background: rgba(244, 233, 220, 0.05);
+  color: var(--sand); font: inherit; font-size: 1rem;
+}
+.order input[type="text"]::placeholder { color: #7d756e; }
+.order input[type="text"]:focus-visible { outline: none; border-color: var(--sun); }
+.order .form-error { margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--sun); }
+.order .form-error:empty { display: none; }
+.order .btn { margin-top: 12px; }
+.order-side { display: grid; gap: 4px; align-content: start; }
+
 /* ---------- Cómo llegar ---------- */
 .howto { list-style: none; display: grid; gap: 22px; margin-top: 28px; }
 .howto li { display: flex; gap: 16px; }
@@ -401,6 +445,7 @@ img { display: block; max-width: 100%; }
   .headliner img { aspect-ratio: 3 / 4; }
   .facts { grid-template-columns: repeat(4, 1fr); }
   .tickets { grid-template-columns: repeat(3, 1fr); align-items: start; }
+  .order { max-width: none; padding: 28px 32px; }
   .ticket--sold { padding-block: 24px; }
   .howto { grid-template-columns: repeat(3, 1fr); }
   .buybar { display: none; }
@@ -480,4 +525,12 @@ main { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Pedido en dos columnas cuando hay espacio */
+@media (min-width: 1000px) {
+  .order { grid-template-columns: 1.4fr 1fr; column-gap: 40px; }
+  .order-title { grid-column: 1 / -1; }
+  .order-side { padding-left: 40px; border-left: 1px solid var(--line); }
+  .order-total { padding-top: 12px; }
 }

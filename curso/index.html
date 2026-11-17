@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=1" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <!-- Landing de ejemplo (curso ficticio). Fotos de Unsplash, uso libre. -->
@@ -186,7 +186,38 @@
           <li>Acceso de por vida y actualizaciones</li>
           <li>Certificado al terminar</li>
         </ul>
-        <a class="btn btn--red btn--block" href="https://wa.me/520000000000?text=Hola,%20quiero%20inscribirme%20al%20curso%20Bolsillo" target="_blank" rel="noopener">Inscribirme ahora</a>
+        <!-- Inscripción: arma el mensaje de WhatsApp con el grupo, la forma de pago y el nombre.
+             Para cambiar grupos o lugares, edita los <label class="slot"> y la lista GRUPOS del script. -->
+        <form class="signup" novalidate>
+          <fieldset class="field">
+            <legend>Elige tu grupo</legend>
+            <div class="slots">
+              <label class="slot">
+                <input type="radio" name="grupo" value="12 de enero" checked />
+                <span><strong>12 de enero</strong><small><b class="hot">Quedan 9 lugares</b></small></span>
+              </label>
+              <label class="slot">
+                <input type="radio" name="grupo" value="9 de febrero" />
+                <span><strong>9 de febrero</strong><small>Hay lugares</small></span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>¿Cómo prefieres pagar?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="pago" value="Tarjeta" checked /><span>Tarjeta</span></label>
+              <label class="chip"><input type="radio" name="pago" value="3 meses sin intereses" /><span>3 MSI</span></label>
+              <label class="chip"><input type="radio" name="pago" value="Transferencia" /><span>Transferencia</span></label>
+              <label class="chip"><input type="radio" name="pago" value="OXXO" /><span>OXXO</span></label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" maxlength="40" autocomplete="given-name" placeholder="Para apartar tu lugar" />
+          </label>
+          <p class="form-error" role="alert"></p>
+          <button class="btn btn--red btn--block" type="submit">Apartar mi lugar <i class="fa-brands fa-whatsapp"></i></button>
+        </form>
         <p class="guarantee"><i class="fa-solid fa-shield-heart"></i> Si en 7 días no te gusta, te devuelvo tu dinero.</p>
       </div>
     </section>
@@ -266,6 +297,26 @@
     motion.reveal('.compare-head, .eyebrow, .h2, .teacher-img, .price, .guarantee');
     motion.stagger('.weeks, .gallery, .reviews, .includes, .faq');
     motion.count('.facts strong');
+
+    // ---------- Inscripción por WhatsApp ----------
+    const WHATSAPP = '520000000000'; // ← número del curso (52 + 10 dígitos)
+    const GRUPOS = ['12 de enero', '9 de febrero'];
+    const PAGOS = ['Tarjeta', '3 meses sin intereses', 'Transferencia', 'OXXO'];
+    const form = document.querySelector('.signup');
+    const error = form.querySelector('.form-error');
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const grupo = form.grupo.value;
+      const pago = form.pago.value;
+      const nombre = limpiar(form.nombre.value, 40);
+      if (!GRUPOS.includes(grupo) || !PAGOS.includes(pago)) return (error.textContent = 'Elige grupo y forma de pago.');
+      if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu lugar.'); }
+      error.textContent = '';
+      const msg = `Hola, soy ${nombre}. Quiero inscribirme al curso Bolsillo.\n• Grupo: ${grupo}\n• Pago: ${pago}`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
 
     // Barra de compra
     const bar = document.querySelector('.buybar');
