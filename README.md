@@ -14,6 +14,10 @@ Otros archivos:
 
 - `index.html` y `estilos.css` — portada con los ejemplos (mismo estilo que el catálogo principal).
 - `assets/motion.js` — efectos al bajar. `assets/cotizar.js` / `cotizar.css` — cotizador en 1 minuto (tu número de WhatsApp está al inicio de `cotizar.js`).
+- `assets/muestra.js` / `muestra.css` — modo muestra: como los negocios son ficticios, los botones de WhatsApp y de llamar
+  enseñan el mensaje que le llegaría al negocio y un botón «Quiero una así» que abre el cotizador de la portada.
+  **Para un cliente real, borra la línea `<script src="../assets/muestra.js" …>`** y todo vuelve a abrir WhatsApp de verdad.
+- `assets/og.jpg` — imagen al compartir la portada.
 - `assets/plantillas/` — capturas que usa la portada (si cambias un ejemplo, vuelve a tomar la suya).
 - `assets/carrusel.js` / `carrusel.css` — flechas, puntitos y una «probadita» para que se note que los ejemplos se deslizan en celular.
 - `404.html` — página de error. `_headers` — encabezados de seguridad (Netlify o Cloudflare Pages).

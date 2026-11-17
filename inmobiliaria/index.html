@@ -271,6 +271,8 @@
   </div>
 
   <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Inmobiliaria"></script>
   <script>
     // Número de WhatsApp del desarrollo (código de país + número, sin espacios ni signos)
     const WHATSAPP = '520000000000';
@@ -339,6 +341,7 @@
       const bonita = new Date(a, m - 1, d).toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
       const modelo = form.modelo.value === 'Los dos' ? 'los dos modelos' : `el modelo ${form.modelo.value}`;
       const msg = `Hola Arbórea, soy ${nombre}. Quiero visitar ${modelo} el ${bonita} a las ${form.hora.value}.\nForma de pago: ${form.pago.value}.`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
 

@@ -68,8 +68,8 @@
         <p class="sub">Desliza para ver la diferencia. Es lo que haces al terminar la semana 4.</p>
       </div>
       <div class="compare" style="--pos: 50%">
-        <img class="compare-after" src="assets/lago.jpg" alt="Foto editada de un lago entre montañas" />
-        <img class="compare-before" src="assets/lago.jpg" alt="" aria-hidden="true" />
+        <img class="compare-after" src="assets/lago.webp" alt="Foto editada de un lago entre montañas" />
+        <img class="compare-before" src="assets/lago.webp" alt="" aria-hidden="true" />
         <span class="compare-tag compare-tag--before">Antes</span>
         <span class="compare-tag compare-tag--after">Después</span>
         <span class="compare-handle" aria-hidden="true"><i class="fa-solid fa-left-right"></i></span>
@@ -234,6 +234,8 @@
   </div>
 
   <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Curso"></script>
   <script>
     // Antes / después
     const compare = document.querySelector('.compare');

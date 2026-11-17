@@ -285,6 +285,8 @@
   </div>
 
   <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Consultorio"></script>
   <script>
     // Número de WhatsApp de la clínica (código de país + número, sin espacios ni signos)
     const WHATSAPP = '520000000000';
@@ -319,6 +321,7 @@
       error.textContent = '';
 
       const msg = `Hola Nácar, soy ${nombre}. Quiero agendar: ${servicio}.\nMe queda ${dias}, ${turno}.`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
 

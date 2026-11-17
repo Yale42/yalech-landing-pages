@@ -260,6 +260,8 @@
   </div>
 
   <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Restaurante"></script>
   <script>
     // Número de WhatsApp del restaurante (código de país + número, sin espacios ni signos)
     const WHATSAPP = '520000000000';
@@ -380,6 +382,7 @@
       const bonita = new Date(a, m - 1, d).toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
       let msg = `Hola Comal, quiero reservar una mesa:\n• ${bonita}, ${hora}\n• ${personas} ${personas === 1 ? 'persona' : 'personas'}\n• A nombre de ${nombre}`;
       if (nota) msg += `\n• Nota: ${nota}`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
 
