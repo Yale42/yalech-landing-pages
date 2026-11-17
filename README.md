@@ -17,6 +17,8 @@ Otros archivos:
 - `assets/muestra.js` / `muestra.css` — modo muestra: como los negocios son ficticios, los botones de WhatsApp y de llamar
   enseñan el mensaje que le llegaría al negocio y un botón «Quiero una así» que abre el cotizador de la portada.
   **Para un cliente real, borra la línea `<script src="../assets/muestra.js" …>`** y todo vuelve a abrir WhatsApp de verdad.
+- `assets/iconos/` — íconos de Font Awesome recortados a los que se usan (9 KB en vez de ~260 KB). Si agregas un ícono
+  nuevo y sale un cuadrito vacío, corre `assets/iconos/actualizar.py` (las instrucciones están dentro).
 - `assets/og.jpg` — imagen al compartir la portada.
 - `assets/plantillas/` — capturas que usa la portada (si cambias un ejemplo, vuelve a tomar la suya).
 - `assets/carrusel.js` / `carrusel.css` — flechas, puntitos y una «probadita» para que se note que los ejemplos se deslizan en celular.
