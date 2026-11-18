@@ -26,6 +26,8 @@ Otros archivos:
 - `assets/og.jpg` — imagen al compartir la portada.
 - `assets/plantillas/` — capturas que usa la portada (si cambias un ejemplo, vuelve a tomar la suya).
 - `assets/carrusel.js` / `carrusel.css` — flechas, puntitos y una «probadita» para que se note que los ejemplos se deslizan en celular.
+- Filtro de la portada: cada plantilla lleva `data-tipo="vender"` o `"agendar"`. Puedes compartir la portada ya
+  filtrada con `?tipo=vender` o `?tipo=agendar`.
 - `404.html` — página de error. `_headers` — encabezados de seguridad (Netlify o Cloudflare Pages).
 
 El catálogo completo y el link en bio están en el repositorio `yalech-web-link-in-bio`. Los enlaces hacia allá usan

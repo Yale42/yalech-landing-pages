@@ -258,6 +258,48 @@ body {
   white-space: nowrap;
 }
 
+/* ---------- Filtro por tipo ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1180px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+.filters button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 9px 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.filters button i { font-size: 0.85em; }
+.filters button span {
+  display: grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--paper);
+  font-size: 0.78rem;
+}
+.filters button:hover { border-color: var(--ink); }
+.filters button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.filters button[aria-pressed="true"] span { background: var(--amber); color: var(--ink); }
+.filters button:focus-visible { outline: 2px solid var(--amber-text); outline-offset: 2px; }
+.item[hidden] { display: none !important; }
+
 /* ---------- Catálogo ---------- */
 .grid {
   max-width: 1180px;
