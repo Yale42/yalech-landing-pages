@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Caudal · Plomería a domicilio en Puebla</title>
+  <meta name="description" content="Fugas, destapes, boilers e instalaciones en Puebla y Cholula. Urgencias 24 horas, precio antes de empezar y 90 días de garantía." />
+  <meta name="theme-color" content="#0f2a44" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Caudal · Plomería a domicilio en Puebla" />
+  <meta property="og:description" content="¿Gotea, se tapó o no sale agua caliente? Cotiza en un minuto y llegamos hoy." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Landing de ejemplo (negocio ficticio). Fotos de Unsplash, uso libre.
+       Todo lo que cambia de un cliente a otro está al inicio del script del final:
+       WHATSAPP y TELEFONO, ZONAS (colonias y códigos postales), PROBLEMAS (precios) y cargos extra. -->
+
+  <!-- ========== Franja de urgencias ========== -->
+  <div class="alert" data-guardia>
+    <span class="alert-dot" aria-hidden="true"></span>
+    <p><strong>Urgencias 24 h.</strong> <span data-guardia-texto>Técnico de guardia disponible</span></p>
+    <a href="tel:+520000000000" data-tel>Llamar</a>
+  </div>
+
+  <header class="topbar">
+    <a class="logo" href="#"><i class="fa-solid fa-droplet" aria-hidden="true"></i> caudal</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#cotizar">Cotizar</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="topbar-cta" href="#cotizar">Cotizar gratis</a>
+  </header>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Plomería y gas a domicilio · Puebla y Cholula</p>
+        <h1 class="title">¿Gotea, se tapó o no sale agua caliente? <em>Llegamos hoy.</em></h1>
+        <p class="lead">Te decimos el precio antes de empezar y te damos 90 días de garantía. Si no aceptas el presupuesto, solo pagas la visita.</p>
+
+        <!-- ¿Llegamos a tu colonia? -->
+        <form class="check" data-check novalidate>
+          <label for="check-colonia">¿Llegamos a tu colonia?</label>
+          <div class="check-row">
+            <input id="check-colonia" name="colonia" type="text" list="lista-colonias" maxlength="60" autocomplete="off" placeholder="Colonia o código postal" />
+            <button class="btn btn--yellow" type="submit">Revisar</button>
+          </div>
+          <div class="check-result" data-check-result aria-live="polite" hidden></div>
+        </form>
+        <datalist id="lista-colonias"></datalist>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/hero.jpg" alt="Llave de agua goteando" />
+        <figcaption class="hero-badge"><strong data-eta-min>35 min</strong><span>tiempo promedio de llegada</span></figcaption>
+      </figure>
+    </section>
+
+    <ul class="trust">
+      <li><i class="fa-solid fa-tag"></i><span><strong>Precio antes de empezar</strong>Sin sorpresas al final</span></li>
+      <li><i class="fa-solid fa-shield-halved"></i><span><strong>90 días de garantía</strong>Si vuelve a fallar, regresamos gratis</span></li>
+      <li><i class="fa-solid fa-id-card"></i><span><strong>Técnicos verificados</strong>Con credencial y uniforme</span></li>
+    </ul>
+
+    <!-- ========== Cotizador + pedido ========== -->
+    <section class="section" id="cotizar" aria-labelledby="cotizar-title">
+      <p class="eyebrow">Cotiza en un minuto</p>
+      <h2 class="h2" id="cotizar-title">¿Qué está pasando?</h2>
+      <p class="sub">Elige el problema y te damos un precio aproximado. El técnico te confirma el precio final antes de tocar nada.</p>
+
+      <form class="quote" data-quote novalidate>
+        <fieldset class="step">
+          <legend><span class="step-n">1</span> El problema</legend>
+          <div class="problems" data-problemas></div>
+        </fieldset>
+
+        <!-- Aviso de seguridad: aparece solo si eligen «Olor o fuga de gas» -->
+        <div class="safety" data-gas hidden role="alert">
+          <p class="safety-title"><i class="fa-solid fa-triangle-exclamation"></i> Antes que nada, por tu seguridad:</p>
+          <ol>
+            <li>Cierra la llave del tanque o del medidor.</li>
+            <li>Abre puertas y ventanas.</li>
+            <li>No prendas ni apagues luces, ni uses cerillos.</li>
+            <li>Sal de la casa y llámanos desde afuera.</li>
+          </ol>
+          <a class="btn btn--red" href="tel:+520000000000" data-tel><i class="fa-solid fa-phone"></i> Llamar ya</a>
+        </div>
+
+        <fieldset class="step">
+          <legend><span class="step-n">2</span> ¿Para cuándo?</legend>
+          <div class="chips" data-urgencias></div>
+          <p class="night" data-nocturno hidden><i class="fa-solid fa-moon"></i> Es horario nocturno: la visita inmediata lleva un cargo extra.</p>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend><span class="step-n">3</span> ¿Dónde?</legend>
+          <label class="field">
+            <span>Colonia o código postal</span>
+            <input name="colonia" type="text" list="lista-colonias" maxlength="60" autocomplete="off" placeholder="Ej. La Paz o 72160" />
+          </label>
+          <div class="check-result" data-quote-zona aria-live="polite" hidden></div>
+          <label class="field">
+            <span>Calle y número <small>(opcional, lo puedes mandar después)</small></span>
+            <input name="calle" type="text" maxlength="80" autocomplete="street-address" />
+          </label>
+        </fieldset>
+
+        <!-- Resultado: precio aproximado y envío -->
+        <div class="estimate" aria-live="polite">
+          <p class="estimate-label">Precio aproximado</p>
+          <p class="estimate-price" data-precio>Elige un problema</p>
+          <ul class="estimate-lines" data-desglose></ul>
+          <p class="estimate-note">El precio final te lo confirma el técnico antes de empezar. Incluye mano de obra; las piezas se cobran aparte si hacen falta.</p>
+          <label class="field field--dark">
+            <span>Tu nombre</span>
+            <input name="nombre" type="text" maxlength="40" autocomplete="given-name" placeholder="Para que el técnico sepa a quién buscar" />
+          </label>
+          <p class="form-error" role="alert"></p>
+          <button class="btn btn--yellow btn--block" type="submit">Pedir técnico por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ========== Cómo funciona ========== -->
+    <section class="section" aria-labelledby="como-title">
+      <p class="eyebrow">Así trabajamos</p>
+      <h2 class="h2" id="como-title">Sin vueltas</h2>
+      <ol class="steps">
+        <li><i class="fa-solid fa-comment-dots"></i><strong>Nos escribes</strong><span>Con tu cotización y tu colonia. Te confirmamos la hora en minutos.</span></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i><strong>Revisamos</strong><span>El técnico encuentra la falla y te dice el precio exacto antes de empezar.</span></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><strong>Lo arreglamos</strong><span>Limpiamos al terminar, pagas como prefieras y te dejamos tu garantía por escrito.</span></li>
+      </ol>
+    </section>
+
+    <!-- ========== Quiénes somos ========== -->
+    <section class="section about" aria-labelledby="about-title">
+      <img class="about-photo" src="assets/herramienta.jpg" alt="Caja con llaves y herramientas de plomería" loading="lazy" />
+      <div class="about-text">
+        <p class="eyebrow">Desde 1994</p>
+        <h2 class="h2" id="about-title">Tres generaciones de plomeros</h2>
+        <blockquote class="founder">
+          <img src="assets/ramiro.jpg" alt="Don Ramiro, fundador, de suéter azul" loading="lazy" />
+          <div>
+            <p>“Mi papá me enseñó que un buen trabajo es el que no tienes que volver a hacer. Por eso damos garantía.”</p>
+            <footer><strong>Don Ramiro Flores</strong> · fundador</footer>
+          </div>
+        </blockquote>
+        <ul class="numbers">
+          <li><strong>12,000</strong><span>servicios hechos</span></li>
+          <li><strong>8</strong><span>técnicos</span></li>
+          <li><strong>4.8 <i class="fa-solid fa-star"></i></strong><span>en Google</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Reseñas ========== -->
+    <section class="section" aria-labelledby="resenas-title">
+      <p class="eyebrow">Clientes</p>
+      <h2 class="h2" id="resenas-title">Lo que dicen en Google</h2>
+      <div class="reviews">
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“Se reventó un tubo a las 11 de la noche. Llegaron en 40 minutos y me cobraron lo que me dijeron por WhatsApp.”</p>
+          <footer>Gabriela · La Paz</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“El boiler no prendía. Me explicaron qué tenía, me dieron dos opciones y escogí la más barata. Cero presión.”</p>
+          <footer>Fernando · Angelópolis</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“A los dos meses volvió a gotear la tarja y vinieron sin cobrarme. Así sí da gusto.”</p>
+          <footer>Lupita · Cholula</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========== Zonas ========== -->
+    <section class="section" id="zonas" aria-labelledby="zonas-title">
+      <p class="eyebrow">Cobertura</p>
+      <h2 class="h2" id="zonas-title">Dónde damos servicio</h2>
+      <p class="sub">Si tu colonia no aparece, escríbenos: muchas veces sí llegamos.</p>
+      <div class="zones" data-zonas></div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section" id="preguntas" aria-labelledby="faq-title">
+      <p class="eyebrow">Preguntas</p>
+      <h2 class="h2" id="faq-title">Antes de llamarnos</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Cobran la visita?</summary>
+          <p>Solo si no aceptas el presupuesto. Si hacemos el trabajo, la visita va incluida. En colonias lejanas hay un cargo de traslado que te decimos desde el principio.</p>
+        </details>
+        <details>
+          <summary>¿Cómo pago?</summary>
+          <p>Efectivo, transferencia o tarjeta (llevamos terminal). Te damos nota y, si la necesitas, factura.</p>
+        </details>
+        <details>
+          <summary>¿Qué cubre la garantía?</summary>
+          <p>Si en 90 días vuelve a fallar lo mismo que arreglamos, regresamos y lo corregimos sin costo.</p>
+        </details>
+        <details>
+          <summary>¿Atienden en la noche y en domingo?</summary>
+          <p>Sí, las urgencias las atendemos las 24 horas, todos los días. De 9 de la noche a 7 de la mañana hay un cargo nocturno.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Caudal · Negocio de ejemplo</span>
+    <a href="../">Diseño de yalech →</a>
+  </footer>
+
+  <!-- Barra fija en celular: urgencias siempre a la mano -->
+  <div class="buybar" aria-hidden="true">
+    <span><i class="fa-solid fa-bolt"></i> <strong>Urgencias</strong> 24 h</span>
+    <a class="btn btn--yellow" href="tel:+520000000000" data-tel tabindex="-1"><i class="fa-solid fa-phone"></i> Llamar</a>
+  </div>
+
+  <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Plomería"></script>
+  <script>
+    // ================== Datos del negocio (cambia esto para un cliente real) ==================
+    const WHATSAPP = '520000000000'; // ← 52 + 10 dígitos
+    const TELEFONO = '+520000000000'; // ← para los botones de «Llamar»
+    const ZONA_HORARIA = 'America/Mexico_City';
+    const NOCHE = { desde: 21, hasta: 7, cargo: 200 }; // horario nocturno y su cargo
+
+    // Zonas: tiempo de llegada, cargo de traslado, colonias y rangos de código postal
+    const ZONAS = [
+      { nombre: 'Zona 1', llegada: '30 a 45 min', traslado: 0, cp: [[72000, 72499]],
+        colonias: ['Centro', 'La Paz', 'Huexotitla', 'El Carmen', 'Chulavista', 'Anzures', 'Gabriel Pastor', 'Santiago', 'San Manuel', 'Jardines de San Manuel', 'La Noria', 'Las Ánimas', 'Bosques de San Sebastián'] },
+      { nombre: 'Zona 2', llegada: '45 a 60 min', traslado: 80, cp: [[72500, 72599], [72810, 72830]],
+        colonias: ['Zavaleta', 'Reserva Territorial Atlixcáyotl', 'Angelópolis', 'Concepción La Cruz', 'Momoxpan', 'Lomas de Angelópolis', 'Tlaxcalancingo'] },
+      { nombre: 'Zona 3', llegada: '60 a 90 min', traslado: 150, cp: [[72700, 72760]],
+        colonias: ['San Pedro Cholula', 'San Andrés Cholula', 'Cuautlancingo', 'Amalucan', 'Santa Clara Ocoyucan'] },
+    ];
+
+    // Problemas: [id, nombre, ícono, desde, hasta]
+    const PROBLEMAS = [
+      ['fuga', 'Fuga de agua', 'fa-droplet', 450, 900],
+      ['destape', 'Drenaje tapado', 'fa-toilet', 550, 1200],
+      ['boiler', 'Boiler o calentador', 'fa-temperature-high', 500, 1400],
+      ['instalar', 'Instalar WC, lavabo o tarja', 'fa-sink', 600, 1500],
+      ['tinaco', 'Tinaco o bomba de agua', 'fa-faucet-drip', 700, 1800],
+      ['gas', 'Olor o fuga de gas', 'fa-fire-flame-simple', 400, 900],
+    ];
+    // Urgencia: [id, texto, cargo]
+    const URGENCIAS = [
+      ['ahora', 'Ahora mismo', 250],
+      ['hoy', 'Hoy', 100],
+      ['programar', 'Otro día', 0],
+    ];
+    // ===========================================================================================
+
+    const pesos = n => '$' + n.toLocaleString('es-MX');
+    document.querySelectorAll('[data-tel]').forEach(a => { a.href = `tel:${TELEFONO}`; });
+
+    // ---------- Hora local: ¿es de noche? ----------
+    const horaLocal = () => Number(new Intl.DateTimeFormat('en-US', { timeZone: ZONA_HORARIA, hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
+    const esNoche = () => { const h = horaLocal(); return h >= NOCHE.desde || h < NOCHE.hasta; };
+    if (esNoche()) {
+      document.querySelector('[data-guardia]').classList.add('is-night');
+      document.querySelector('[data-guardia-texto]').textContent = `Técnico de guardia disponible · cargo nocturno ${pesos(NOCHE.cargo)}`;
+    }
+
+    // ---------- Buscar colonia o código postal ----------
+    // Quita acentos, mayúsculas, «col.», «fracc.», signos y espacios de más
+    const normal = t => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+      .replace(/\b(colonia|col|fraccionamiento|fracc|barrio)\b\.?/g, ' ')
+      .replace(/[^a-z0-9ñ ]/g, ' ').replace(/\s+/g, ' ').trim();
+    const TODAS = ZONAS.flatMap(z => z.colonias.map(c => ({ colonia: c, clave: normal(c), zona: z })));
+    document.querySelector('#lista-colonias').append(...TODAS.map(t => { const o = document.createElement('option'); o.value = t.colonia; return o; }));
+
+    // Devuelve { estado: 'si' | 'no' | 'varias' | 'vacio', zona, colonia, opciones }
+    const buscar = texto => {
+      const q = normal(texto);
+      if (!q) return { estado: 'vacio' };
+      if (/^\d{5}$/.test(q)) {
+        const cp = Number(q);
+        const zona = ZONAS.find(z => z.cp.some(([a, b]) => cp >= a && cp <= b));
+        return zona ? { estado: 'si', zona, colonia: `C.P. ${q}` } : { estado: 'no', colonia: `C.P. ${q}` };
+      }
+      if (/^\d+$/.test(q)) return { estado: 'vacio' };
+      const exacta = TODAS.find(t => t.clave === q);
+      if (exacta) return { estado: 'si', zona: exacta.zona, colonia: exacta.colonia };
+      const parecidas = TODAS.filter(t => t.clave.startsWith(q) || (q.length >= 4 && t.clave.includes(q)));
+      if (parecidas.length === 1) return { estado: 'si', zona: parecidas[0].zona, colonia: parecidas[0].colonia };
+      if (parecidas.length > 1) return { estado: 'varias', opciones: parecidas.slice(0, 5) };
+      return { estado: 'no', colonia: texto.trim().slice(0, 60) };
+    };
+
+    // Pinta el resultado en una caja; al tocar una sugerencia llama a elegir(colonia)
+    const pintarZona = (caja, r, elegir) => {
+      caja.hidden = r.estado === 'vacio';
+      caja.className = 'check-result is-' + r.estado;
+      caja.replaceChildren();
+      const p = document.createElement('p');
+      if (r.estado === 'si') {
+        p.innerHTML = '<i class="fa-solid fa-circle-check"></i> <span></span>';
+        p.querySelector('span').textContent = `Sí llegamos a ${r.colonia}. Tiempo de llegada: ${r.zona.llegada}${r.zona.traslado ? ` · traslado ${pesos(r.zona.traslado)}` : ' · sin cargo de traslado'}.`;
+      } else if (r.estado === 'no') {
+        p.innerHTML = '<i class="fa-solid fa-circle-info"></i> <span></span>';
+        p.querySelector('span').textContent = `No tenemos ${r.colonia} en la lista, pero escríbenos: muchas veces sí llegamos.`;
+      } else if (r.estado === 'varias') {
+        p.textContent = '¿Cuál de estas?';
+        const lista = document.createElement('div');
+        lista.className = 'check-options';
+        for (const o of r.opciones) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = o.colonia;
+          b.addEventListener('click', () => elegir(o.colonia));
+          lista.append(b);
+        }
+        caja.append(p, lista);
+        return;
+      }
+      caja.append(p);
+    };
+
+    // ---------- Estado compartido entre la portada y el cotizador ----------
+    const quote = document.querySelector('[data-quote]');
+    const check = document.querySelector('[data-check]');
+    const estado = { problema: null, urgencia: 'hoy', zona: buscar('') };
+
+    const ponerColonia = (texto, desde) => {
+      estado.zona = buscar(texto);
+      if (desde !== check) check.colonia.value = texto;
+      if (desde !== quote) quote.colonia.value = texto;
+      pintarZona(check.querySelector('[data-check-result]'), estado.zona, c => { ponerColonia(c); check.colonia.focus(); });
+      pintarZona(quote.querySelector('[data-quote-zona]'), estado.zona, c => { ponerColonia(c); quote.colonia.focus(); });
+      pintarPrecio();
+    };
+
+    check.addEventListener('submit', e => {
+      e.preventDefault();
+      ponerColonia(check.colonia.value, check);
+      // Si ya llegamos, ofrece seguir al cotizador
+      const caja = check.querySelector('[data-check-result]');
+      if (estado.zona.estado === 'si' || estado.zona.estado === 'no') {
+        const a = document.createElement('a');
+        a.className = 'check-next';
+        a.href = '#cotizar';
+        a.textContent = 'Cotizar mi servicio →';
+        caja.append(a);
+      }
+    });
+    // Mientras escribe: solo resultados claros (para no saltar a «no llegamos» a media palabra)
+    check.colonia.addEventListener('input', () => {
+      const r = buscar(check.colonia.value);
+      if (r.estado === 'si' || r.estado === 'vacio') ponerColonia(check.colonia.value, check);
+    });
+    quote.colonia.addEventListener('input', () => {
+      const r = buscar(quote.colonia.value);
+      if (r.estado === 'si' || r.estado === 'vacio') ponerColonia(quote.colonia.value, quote);
+    });
+    quote.colonia.addEventListener('change', () => ponerColonia(quote.colonia.value, quote));
+
+    // ---------- Problemas y urgencia ----------
+    const cajaProblemas = quote.querySelector('[data-problemas]');
+    for (const [id, nombre, icono, desde, hasta] of PROBLEMAS) {
+      const l = document.createElement('label');
+      l.className = 'problem' + (id === 'gas' ? ' problem--gas' : '');
+      l.innerHTML = `<input type="radio" name="problema" /><i class="fa-solid" aria-hidden="true"></i><strong></strong><small></small>`;
+      l.querySelector('input').value = id;
+      l.querySelector('i').classList.add(icono);
+      l.querySelector('strong').textContent = nombre;
+      l.querySelector('small').textContent = `${pesos(desde)} – ${pesos(hasta)}`;
+      cajaProblemas.append(l);
+    }
+    const cajaUrg = quote.querySelector('[data-urgencias]');
+    for (const [id, texto, cargo] of URGENCIAS) {
+      const l = document.createElement('label');
+      l.className = 'chip';
+      l.innerHTML = '<input type="radio" name="urgencia" /><span></span>';
+      l.querySelector('input').value = id;
+      l.querySelector('input').checked = id === estado.urgencia;
+      l.querySelector('span').textContent = cargo ? `${texto} · +${pesos(cargo)}` : texto;
+      cajaUrg.append(l);
+    }
+    quote.addEventListener('change', e => {
+      if (e.target.name === 'problema' && PROBLEMAS.some(p => p[0] === e.target.value)) estado.problema = e.target.value;
+      if (e.target.name === 'urgencia' && URGENCIAS.some(u => u[0] === e.target.value)) estado.urgencia = e.target.value;
+      quote.querySelector('[data-gas]').hidden = estado.problema !== 'gas';
+      // Gas: siempre es urgente
+      if (estado.problema === 'gas' && estado.urgencia !== 'ahora') {
+        estado.urgencia = 'ahora';
+        quote.querySelectorAll('input[name="urgencia"]').forEach(i => { i.checked = i.value === 'ahora'; });
+      }
+      pintarPrecio();
+    });
+
+    // ---------- Precio aproximado ----------
+    const calcular = () => {
+      const p = PROBLEMAS.find(x => x[0] === estado.problema);
+      if (!p) return null;
+      const u = URGENCIAS.find(x => x[0] === estado.urgencia) || URGENCIAS[1];
+      const lineas = [[`${p[1]} (mano de obra)`, `${pesos(p[3])} – ${pesos(p[4])}`]];
+      let extra = 0;
+      if (u[2]) { extra += u[2]; lineas.push([`Urgencia: ${u[1].toLowerCase()}`, `+${pesos(u[2])}`]); }
+      const noche = u[0] === 'ahora' && esNoche();
+      if (noche) { extra += NOCHE.cargo; lineas.push(['Cargo nocturno', `+${pesos(NOCHE.cargo)}`]); }
+      const z = estado.zona;
+      if (z.estado === 'si') {
+        extra += z.zona.traslado;
+        lineas.push([`Traslado a ${z.colonia}`, z.zona.traslado ? `+${pesos(z.zona.traslado)}` : 'Gratis']);
+      } else lineas.push(['Traslado', 'según tu colonia']);
+      return { p, u, noche, lineas, desde: p[3] + extra, hasta: p[4] + extra };
+    };
+    const pintarPrecio = () => {
+      const c = calcular();
+      quote.querySelector('[data-nocturno]').hidden = !(estado.urgencia === 'ahora' && esNoche());
+      quote.querySelector('[data-precio]').textContent = c ? `${pesos(c.desde)} – ${pesos(c.hasta)}` : 'Elige un problema';
+      quote.querySelector('[data-desglose]').replaceChildren(...(c ? c.lineas : []).map(([a, b]) => {
+        const li = document.createElement('li');
+        li.innerHTML = '<span></span><b></b>';
+        li.querySelector('span').textContent = a;
+        li.querySelector('b').textContent = b;
+        return li;
+      }));
+    };
+
+    // ---------- Enviar ----------
+    const error = quote.querySelector('.form-error');
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    quote.addEventListener('submit', e => {
+      e.preventDefault();
+      ponerColonia(quote.colonia.value, quote);
+      const c = calcular();
+      const nombre = limpiar(quote.nombre.value, 40);
+      const calle = limpiar(quote.calle.value, 80);
+      const z = estado.zona;
+      if (!c) { error.textContent = 'Elige qué problema tienes.'; return cajaProblemas.querySelector('input').focus(); }
+      if (z.estado === 'vacio' || z.estado === 'varias') { quote.colonia.focus(); return (error.textContent = z.estado === 'varias' ? 'Elige tu colonia de la lista.' : 'Escribe tu colonia o código postal.'); }
+      if (nombre.length < 2) { quote.nombre.focus(); return (error.textContent = 'Escribe tu nombre.'); }
+      error.textContent = '';
+      const lugar = z.estado === 'si' ? `${z.colonia} (${z.zona.nombre})` : `${z.colonia} (no está en la lista de zonas)`;
+      let msg = `${c.u[0] === 'ahora' ? '🚨 URGENCIA\n' : ''}Hola Caudal, soy ${nombre}.\n• Problema: ${c.p[1]}\n• Para: ${c.u[1].toLowerCase()}\n• Colonia: ${lugar}`;
+      if (calle) msg += `\n• Calle: ${calle}`;
+      msg += `\n• Precio aproximado: ${pesos(c.desde)} – ${pesos(c.hasta)}`;
+      if (c.noche) msg += ' (con cargo nocturno)';
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+
+    // ---------- Lista de zonas ----------
+    document.querySelector('[data-zonas]').append(...ZONAS.map((z, i) => {
+      const d = document.createElement('details');
+      d.className = 'zone';
+      d.open = i === 0;
+      d.innerHTML = '<summary><strong></strong><span></span></summary><p></p>';
+      d.querySelector('strong').textContent = z.nombre;
+      d.querySelector('span').textContent = `${z.llegada} · ${z.traslado ? `traslado ${pesos(z.traslado)}` : 'sin traslado'}`;
+      d.querySelector('p').textContent = z.colonias.join(' · ');
+      return d;
+    }));
+    document.querySelector('[data-eta-min]').textContent = ZONAS[0].llegada.split(' a ')[0] + ' min';
+
+    pintarPrecio();
+
+    // ---------- Efectos al bajar ----------
+    motion.reveal('.eyebrow, .h2, .sub, .about-photo, .founder');
+    motion.stagger('.trust, .steps, .reviews, .faq, .numbers');
+
+    // ---------- Barra fija en celular ----------
+    const bar = document.querySelector('.buybar');
+    const hero = document.querySelector('.hero');
+    const update = () => bar.classList.toggle('show', hero.getBoundingClientRect().bottom < 0);
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  </script>
+</body>
+</html>

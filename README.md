@@ -11,6 +11,8 @@ carpeta y se puede ver en vivo. Para un cliente real, copia la carpeta de la pla
 - `inmobiliaria/` — desarrollo de casas (galería, modelos, calculadora de mensualidad, visitas)
 - `gimnasio/` — gimnasio funcional (horario de clases por día, planes mensual/anual, clase de prueba gratis)
 - `barberia/` — barbería clásica (arma tu servicio con total y duración, barberos, agenda con horarios libres)
+- `plomeria/` — servicio a domicilio (¿llegamos a tu colonia?, cotizador con cargos por zona y horario, urgencias 24 h).
+  Sirve igual para electricistas, técnicos o limpieza: los datos están al inicio del script
 
 Otros archivos:
 

@@ -1,8 +1,8 @@
 /* Íconos: Font Awesome Free 6.5.1 (https://fontawesome.com), recortado a los que usa este sitio.
  * Licencia: íconos CC BY 4.0, fuentes SIL OFL 1.1, código MIT. Copyright 2023 Fonticons, Inc.
  * Generado con assets/iconos/actualizar.py; no lo edites a mano. */
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=066225ce") format("woff2"); }
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=4ff8244c") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=6aa98fb0") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=b9c2aaea") format("woff2"); }
 @font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: block; src: url("brands.woff2?v=27e3b55a") format("woff2"); }
 
 .fa-solid, .fa-regular, .fa-brands {
@@ -29,15 +29,21 @@
 .fa-chevron-left::before { content: "\f053"; }
 .fa-chevron-right::before { content: "\f054"; }
 .fa-children::before { content: "\e4e1"; }
+.fa-circle-check::before { content: "\f058"; }
+.fa-circle-info::before { content: "\f05a"; }
 .fa-clock::before { content: "\f017"; }
+.fa-comment-dots::before { content: "\f4ad"; }
 .fa-credit-card::before { content: "\f09d"; }
 .fa-crown::before { content: "\f521"; }
 .fa-dog::before { content: "\f6d3"; }
+.fa-droplet::before { content: "\f043"; }
 .fa-dumbbell::before { content: "\f44b"; }
 .fa-envelope-open-text::before { content: "\f658"; }
 .fa-eye::before { content: "\f06e"; }
 .fa-face-smile-beam::before { content: "\f5b8"; }
+.fa-faucet-drip::before { content: "\e006"; }
 .fa-file-invoice::before { content: "\f570"; }
+.fa-fire-flame-simple::before { content: "\f46a"; }
 .fa-gift::before { content: "\f06b"; }
 .fa-globe::before { content: "\f0ac"; }
 .fa-hand::before { content: "\f256"; }
@@ -49,6 +55,8 @@
 .fa-link::before { content: "\f0c1"; }
 .fa-location-dot::before { content: "\f3c5"; }
 .fa-lock::before { content: "\f023"; }
+.fa-magnifying-glass::before { content: "\f002"; }
+.fa-moon::before { content: "\f186"; }
 .fa-paintbrush::before { content: "\f1fc"; }
 .fa-person-swimming::before { content: "\f5c4"; }
 .fa-phone::before { content: "\f095"; }
@@ -57,14 +65,20 @@
 .fa-rocket::before { content: "\f135"; }
 .fa-ruler-combined::before { content: "\f546"; }
 .fa-scissors::before { content: "\f0c4"; }
+.fa-screwdriver-wrench::before { content: "\f7d9"; }
 .fa-shield-halved::before { content: "\f3ed"; }
 .fa-shield-heart::before { content: "\e574"; }
 .fa-shower::before { content: "\f2cc"; }
+.fa-sink::before { content: "\e06d"; }
 .fa-snowflake::before { content: "\f2dc"; }
 .fa-square-parking::before { content: "\f540"; }
 .fa-star::before { content: "\f005"; }
+.fa-tag::before { content: "\f02b"; }
+.fa-temperature-high::before { content: "\f769"; }
+.fa-toilet::before { content: "\f7d8"; }
 .fa-tooth::before { content: "\f5c9"; }
 .fa-tree::before { content: "\f1bb"; }
+.fa-triangle-exclamation::before { content: "\f071"; }
 .fa-truck-fast::before { content: "\f48b"; }
 .fa-truck-medical::before { content: "\f0f9"; }
 .fa-umbrella::before { content: "\f0e9"; }
