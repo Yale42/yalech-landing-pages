@@ -22,6 +22,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
   <link rel="stylesheet" href="styles.css?v=6" />
+  <!-- Información para Google (horario, dirección, precios). No se ve en la página.
+       Al publicar con datos reales: cambia telephone, address y la imagen por la URL completa. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "Marea Fest 2027",
+    "description": "Dos días de música frente al mar en Puerto Escondido, Oaxaca.",
+    "image": "assets/og.jpg",
+    "startDate": "2027-03-13T16:00:00-06:00",
+    "endDate": "2027-03-14T23:59:00-06:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Playa Bacocho",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Puerto Escondido",
+        "addressRegion": "Oax.",
+        "addressCountry": "MX"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Marea Fest"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "General · Fase 2",
+        "price": "1450",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/LimitedAvailability"
+      },
+      {
+        "@type": "Offer",
+        "name": "VIP",
+        "price": "2900",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/LimitedAvailability"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Landing de ejemplo (evento y artistas ficticios). Fotos de Unsplash, uso libre.

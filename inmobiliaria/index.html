@@ -22,6 +22,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
   <link rel="stylesheet" href="styles.css?v=2" />
+  <!-- Información para Google (horario, dirección, precios). No se ve en la página.
+       Al publicar con datos reales: cambia telephone, address y la imagen por la URL completa. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Arbórea",
+    "description": "Casas de 3 recámaras con jardín en privada con alberca y casa club, al norte de Mérida. Desde $3,450,000.",
+    "image": "assets/og.jpg",
+    "telephone": "+520000000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carretera Mérida–Progreso km 12",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yuc.",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Landing de ejemplo (desarrollo ficticio). Fotos de Unsplash, uso libre.

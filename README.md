@@ -35,3 +35,11 @@ El catálogo completo y el link en bio están en el repositorio `yalech-web-link
 
 Hecho a mano: HTML, CSS y JavaScript, sin herramientas de compilación. Para verlo, abre `index.html` o sirve la carpeta con
 `python3 -m http.server`.
+
+## Al usar una plantilla con un cliente real
+
+1. Copia la carpeta de la plantilla a un repositorio nuevo (junto con lo que use de `assets/`).
+2. Borra la línea del modo muestra (`<script src="../assets/muestra.js" …>`).
+3. Cambia el número de WhatsApp (`WHATSAPP` en el script) y los teléfonos.
+4. Actualiza el bloque «Información para Google» del `<head>`: nombre, dirección, teléfono, horario
+   y la imagen con la URL completa. Lo mismo en las etiquetas `og:` de vista previa.

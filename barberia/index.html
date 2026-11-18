@@ -22,6 +22,48 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
   <link rel="stylesheet" href="styles.css?v=2" />
+  <!-- Información para Google (horario, dirección, precios). No se ve en la página.
+       Al publicar con datos reales: cambia telephone, address y la imagen por la URL completa. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Navaja",
+    "description": "Barbería clásica: cortes, degradados, barba con toalla caliente y afeitado con navaja.",
+    "image": "assets/og.jpg",
+    "telephone": "+520000000000",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Libertad 1820, Col. Americana",
+      "addressLocality": "Guadalajara",
+      "addressRegion": "Jal.",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "15:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Landing de ejemplo (barbería ficticia). Fotos de Unsplash, uso libre.

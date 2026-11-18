@@ -22,6 +22,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
   <link rel="stylesheet" href="styles.css?v=2" />
+  <!-- Información para Google (horario, dirección, precios). No se ve en la página.
+       Al publicar con datos reales: cambia telephone, address y la imagen por la URL completa. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "Brío",
+    "description": "Gimnasio funcional con clases de fuerza, HIIT, box y movilidad en grupos de máximo 12.",
+    "image": "assets/og.jpg",
+    "telephone": "+520000000000",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Paseo de los Leones 2350, Cumbres",
+      "addressLocality": "Monterrey",
+      "addressRegion": "N.L.",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "06:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "12:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Landing de ejemplo (gimnasio ficticio). Fotos de Unsplash, uso libre.
