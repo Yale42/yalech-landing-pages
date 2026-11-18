@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Navaja · Barbería clásica en Guadalajara</title>
+  <meta name="description" content="Cortes, degradados, barba con toalla caliente y afeitado con navaja en la colonia Americana. Agenda tu cita y llega a tu hora." />
+  <meta name="theme-color" content="#f2ebdf" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Navaja · Barbería clásica en Guadalajara" />
+  <meta property="og:description" content="Arma tu servicio, elige barbero y agenda tu cita por WhatsApp." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/iconos/iconos.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Landing de ejemplo (barbería ficticia). Fotos de Unsplash, uso libre.
+       Para cambiar el número de WhatsApp, edita WHATSAPP al inicio del script del final.
+       Servicios y precios: SERVICIOS en el script. Barberos y días que trabajan: BARBEROS. -->
+
+  <header class="topbar">
+    <a class="logo" href="#"><i class="fa-solid fa-scissors" aria-hidden="true"></i> Navaja</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#barberos">Barberos</a>
+      <a href="#ubicacion">Horario</a>
+    </nav>
+    <a class="topbar-cta" href="#agenda">Agendar</a>
+  </header>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Barbería clásica · Col. Americana, Guadalajara</p>
+        <h1 class="title">Cortes que se notan. <em>Citas que se respetan.</em></h1>
+        <p class="lead">Llegas a tu hora y te atienden a tu hora. Toalla caliente, navaja y una cerveza o un café de cortesía.</p>
+        <div class="hero-actions">
+          <a class="btn btn--wine" href="#agenda">Agendar mi cita</a>
+          <a class="btn-link" href="#servicios">Ver precios <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <ul class="trust">
+          <li><strong>4.9 <i class="fa-solid fa-star"></i></strong><span>820 reseñas</span></li>
+          <li><strong>0 min</strong><span>de espera</span></li>
+          <li><strong>Desde 2009</strong><span>en la Americana</span></li>
+        </ul>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/hero.jpg" alt="Barbero perfilando con navaja la barba de un cliente con tatuajes" />
+        <figcaption class="seal" aria-hidden="true"><span>Toalla<br />caliente</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ========== Servicios ==========
+         Se arma desde SERVICIOS (script). Puedes elegir un corte y un servicio de barba;
+         si eliges los dos, se aplica el descuento de combo. -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <p class="eyebrow">Servicios</p>
+      <h2 class="h2" id="servicios-title">Arma tu servicio</h2>
+      <p class="sub">Elige lo que quieres y te decimos cuánto cuesta y cuánto dura. <strong>Corte + barba</strong> tiene $40 de descuento.</p>
+      <div class="menu">
+        <fieldset class="menu-group">
+          <legend>Corte <small>elige uno</small></legend>
+          <div class="menu-list" data-grupo="corte"></div>
+        </fieldset>
+        <fieldset class="menu-group">
+          <legend>Barba <small>elige uno</small></legend>
+          <div class="menu-list" data-grupo="barba"></div>
+        </fieldset>
+        <fieldset class="menu-group">
+          <legend>Extras</legend>
+          <div class="menu-list" data-grupo="extra"></div>
+        </fieldset>
+      </div>
+      <div class="tally" aria-live="polite">
+        <div>
+          <p class="tally-what" data-resumen>Aún no eliges nada</p>
+          <p class="tally-meta" data-meta>Toca un servicio para agregarlo</p>
+        </div>
+        <a class="btn btn--wine" href="#agenda">Agendar</a>
+      </div>
+    </section>
+
+    <!-- ========== Trabajos ========== -->
+    <section class="section" aria-labelledby="trabajos-title">
+      <p class="eyebrow">Trabajos</p>
+      <h2 class="h2" id="trabajos-title">Hechos aquí, esta semana</h2>
+      <ul class="works">
+        <li><img src="assets/t-fade.jpg" alt="Barbero haciendo un degradado con máquina" loading="lazy" /><span>Degradado bajo</span></li>
+        <li><img src="assets/t-arriba.jpg" alt="Corte clásico peinado de lado visto desde arriba" loading="lazy" /><span>Clásico peinado</span></li>
+        <li><img src="assets/t-cliente.jpg" alt="Cliente sonriendo mientras le recortan las patillas" loading="lazy" /><span>Texturizado</span></li>
+      </ul>
+    </section>
+
+    <!-- ========== Barberos ========== -->
+    <section class="section section--dark" id="barberos" aria-labelledby="barberos-title">
+      <p class="eyebrow eyebrow--light">Barberos</p>
+      <h2 class="h2" id="barberos-title">Cada quien con su estilo</h2>
+      <ul class="barbers">
+        <li class="barber">
+          <img src="assets/b-chava.jpg" alt="Chava, barbero, sonriendo con las manos en la barba" loading="lazy" />
+          <h3>Chava</h3>
+          <p class="barber-role">Fundador · clásicos y navaja</p>
+          <p>Lleva 20 años en esto. Si quieres un afeitado como los de antes, es con él.</p>
+          <p class="barber-days" data-dias="chava"></p>
+          <a class="btn btn--light" href="#agenda" data-con="chava">Agendar con Chava</a>
+        </li>
+        <li class="barber">
+          <img src="assets/b-beto.jpg" alt="Beto, barbero, con sudadera negra frente a una pared de ladrillo" loading="lazy" />
+          <h3>Beto</h3>
+          <p class="barber-role">Degradados y barba</p>
+          <p>Sus fades no dejan línea. Trabaja también los domingos.</p>
+          <p class="barber-days" data-dias="beto"></p>
+          <a class="btn btn--light" href="#agenda" data-con="beto">Agendar con Beto</a>
+        </li>
+        <li class="barber">
+          <img src="assets/b-ivan.jpg" alt="Iván, barbero, recargado en un barandal" loading="lazy" />
+          <h3>Iván</h3>
+          <p class="barber-role">Pelo rizado y diseños</p>
+          <p>Especialista en cabello chino y rayitas. Paciente con los niños.</p>
+          <p class="barber-days" data-dias="ivan"></p>
+          <a class="btn btn--light" href="#agenda" data-con="ivan">Agendar con Iván</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== Reseñas ========== -->
+    <section class="section" aria-labelledby="resenas-title">
+      <p class="eyebrow">Reseñas</p>
+      <h2 class="h2" id="resenas-title">4.9 en Google, 820 opiniones</h2>
+      <div class="reviews">
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“Llegué 5:00 y a las 5:00 ya estaba sentado. Eso no me había pasado en ninguna barbería.”</p>
+          <footer>Andrés · hace 1 semana</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“La barba con toalla caliente es otro nivel. Salí como nuevo. Chava es un maestro.”</p>
+          <footer>Rodrigo · hace 3 semanas</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>“Por fin alguien que sabe cortar pelo chino. Iván ya es el barbero oficial de mi hijo y mío.”</p>
+          <footer>Daniel · hace 1 mes</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========== Agenda ========== -->
+    <section class="section" id="agenda" aria-labelledby="agenda-title">
+      <div class="book">
+        <div class="book-text">
+          <p class="eyebrow">Agenda</p>
+          <h2 class="h2" id="agenda-title">Aparta tu silla</h2>
+          <p class="sub">Solo te mostramos los horarios en los que cabe tu servicio completo.</p>
+          <figure class="book-photo">
+            <img src="assets/sillon.jpg" alt="Sillón de barbero de piel café" loading="lazy" />
+          </figure>
+        </div>
+
+        <form class="form" novalidate>
+          <div class="pick">
+            <p class="pick-label">Tu servicio</p>
+            <p class="pick-what" data-resumen>Aún no eliges nada</p>
+            <p class="pick-meta" data-meta><a href="#servicios">Elige tu servicio arriba</a></p>
+          </div>
+          <fieldset class="field">
+            <legend>Barbero</legend>
+            <div class="chips" data-barberos>
+              <label class="chip"><input type="radio" name="barbero" value="cualquiera" checked /><span>El que esté libre</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Día</legend>
+            <div class="chips" data-dias-form></div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Hora</legend>
+            <div class="times" data-horas></div>
+            <p class="times-empty" data-sin-horas hidden>Ese día ya no queda espacio para tu servicio. Prueba otro día u otro barbero.</p>
+          </fieldset>
+          <label class="field">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" maxlength="40" autocomplete="given-name" placeholder="Para apartar tu silla" />
+          </label>
+          <p class="form-error" role="alert"></p>
+          <button class="btn btn--wine btn--block" type="submit">Agendar por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+          <p class="form-note">Si no puedes llegar, avísanos y cambiamos tu cita sin problema.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section" aria-labelledby="faq-title">
+      <p class="eyebrow">Preguntas</p>
+      <h2 class="h2" id="faq-title">Lo que nos preguntan</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Atienden sin cita?</summary>
+          <p>Sí, si hay una silla libre. Pero con cita te garantizamos que no esperas.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa si llego tarde?</summary>
+          <p>Te esperamos 10 minutos. Después de eso, si el siguiente cliente ya llegó, te reacomodamos en el próximo espacio.</p>
+        </details>
+        <details>
+          <summary>¿Cómo pago?</summary>
+          <p>Efectivo, tarjeta o transferencia. La propina es voluntaria y va directo a tu barbero.</p>
+        </details>
+        <details>
+          <summary>¿Cortan a niños?</summary>
+          <p>Sí, a partir de 3 años. Tenemos asiento especial y caricaturas mientras tanto.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== Ubicación ========== -->
+    <section class="section where" id="ubicacion" aria-labelledby="where-title">
+      <div>
+        <h2 class="h2" id="where-title">Ven a vernos</h2>
+        <p class="address">Av. Libertad 1820, Col. Americana<br />Guadalajara, Jal.</p>
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Colonia%20Americana%2C%20Guadalajara" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Cómo llegar</a>
+      </div>
+      <table class="hours">
+        <caption class="sr-only">Horario</caption>
+        <tbody>
+          <tr data-dia="2"><th scope="row">Martes a viernes</th><td>10:00 – 20:00</td></tr>
+          <tr data-dia="6"><th scope="row">Sábado</th><td>10:00 – 20:00</td></tr>
+          <tr data-dia="0"><th scope="row">Domingo</th><td>10:00 – 15:00</td></tr>
+          <tr data-dia="1"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Navaja · Barbería de ejemplo</span>
+    <a href="../">Diseño de yalech →</a>
+  </footer>
+
+  <!-- Barra fija en celular: enseña lo que llevas elegido y se oculta en la agenda -->
+  <div class="buybar" aria-hidden="true">
+    <span data-barra>Corte desde <strong>$190</strong></span>
+    <a class="btn btn--wine" href="#agenda" tabindex="-1">Agendar</a>
+  </div>
+
+  <script src="../assets/motion.js"></script>
+  <!-- Modo muestra (plantilla ficticia). Para un cliente real, borra la siguiente línea. -->
+  <script src="../assets/muestra.js?v=1" data-ejemplo="Barbería"></script>
+  <script>
+    const WHATSAPP = '520000000000'; // ← número de la barbería (52 + 10 dígitos)
+    const ZONA = 'America/Mexico_City';
+    const COMBO = 40; // descuento si eliges corte + barba
+
+    // [id, nombre, precio, minutos, descripción, grupo]. En «corte» y «barba» solo se elige uno.
+    const SERVICIOS = [
+      ['clasico', 'Corte clásico', 250, 40, 'Tijera y máquina, con lavado y peinado.', 'corte'],
+      ['fade', 'Degradado (fade)', 280, 45, 'Bajo, medio o alto. Sin línea.', 'corte'],
+      ['nino', 'Corte de niño', 190, 30, 'Hasta 12 años.', 'corte'],
+      ['barba', 'Barba con toalla caliente', 200, 30, 'Perfilado, aceite y bálsamo.', 'barba'],
+      ['afeitado', 'Afeitado clásico con navaja', 230, 35, 'Al ras, con espuma caliente.', 'barba'],
+      ['ceja', 'Ceja', 80, 10, 'Con navaja o pinza.', 'extra'],
+      ['mascarilla', 'Mascarilla negra', 120, 15, 'Limpia los poros de la nariz y frente.', 'extra'],
+    ];
+    // Días que trabaja cada barbero (0 = domingo … 6 = sábado)
+    const BARBEROS = {
+      chava: { nombre: 'Chava', dias: [2, 3, 4, 5, 6] },
+      beto: { nombre: 'Beto', dias: [0, 2, 3, 4, 5, 6] },
+      ivan: { nombre: 'Iván', dias: [0, 3, 4, 5, 6] },
+    };
+    const HORARIO = { 0: [10, 15], 2: [10, 20], 3: [10, 20], 4: [10, 20], 5: [10, 20], 6: [10, 20] }; // lunes cerrado
+
+    const pesos = n => '$' + n.toLocaleString('es-MX');
+    const porId = id => SERVICIOS.find(s => s[0] === id);
+
+    // ---------- Menú de servicios ----------
+    const elegidos = new Set();
+    document.querySelectorAll('.menu-list').forEach(lista => {
+      for (const [id, nombre, precio, min, desc, grupo] of SERVICIOS.filter(s => s[5] === lista.dataset.grupo)) {
+        const l = document.createElement('label');
+        l.className = 'item';
+        l.innerHTML = `<input type="checkbox" value="" /><span class="item-mark" aria-hidden="true"></span>
+          <span class="item-text"><strong></strong><small></small></span>
+          <span class="item-dots" aria-hidden="true"></span>
+          <span class="item-price"><b></b><small></small></span>`;
+        l.querySelector('input').value = id;
+        l.querySelector('strong').textContent = nombre;
+        l.querySelector('.item-text small').textContent = desc;
+        l.querySelector('.item-price b').textContent = pesos(precio);
+        l.querySelector('.item-price small').textContent = `${min} min`;
+        lista.append(l);
+      }
+    });
+    document.querySelector('.menu').addEventListener('change', e => {
+      const id = e.target.value;
+      const s = porId(id);
+      if (!s) return;
+      if (e.target.checked) {
+        // Solo uno por grupo en corte y barba
+        if (s[5] !== 'extra') for (const otro of [...elegidos]) if (porId(otro)[5] === s[5]) elegidos.delete(otro);
+        elegidos.add(id);
+      } else elegidos.delete(id);
+      pintarServicio();
+      pintarHoras();
+    });
+
+    const resumen = () => {
+      const lista = SERVICIOS.filter(s => elegidos.has(s[0]));
+      const hayCombo = lista.some(s => s[5] === 'corte') && lista.some(s => s[5] === 'barba');
+      const total = lista.reduce((t, s) => t + s[2], 0) - (hayCombo ? COMBO : 0);
+      const minutos = lista.reduce((t, s) => t + s[3], 0);
+      return { lista, hayCombo, total, minutos };
+    };
+    const pintarServicio = () => {
+      const { lista, hayCombo, total, minutos } = resumen();
+      document.querySelectorAll('.menu input').forEach(i => { i.checked = elegidos.has(i.value); });
+      const que = lista.length ? lista.map(s => s[1]).join(' + ') : 'Aún no eliges nada';
+      const meta = lista.length ? `${minutos} min · ${pesos(total)}${hayCombo ? ` · ahorras ${pesos(COMBO)}` : ''}` : '';
+      document.querySelectorAll('[data-resumen]').forEach(p => { p.textContent = que; });
+      document.querySelectorAll('[data-meta]').forEach(p => {
+        if (lista.length) p.textContent = meta;
+        else if (p.closest('.form')) p.innerHTML = '<a href="#servicios">Elige tu servicio arriba</a>';
+        else p.textContent = 'Toca un servicio para agregarlo';
+      });
+      document.querySelector('.tally').classList.toggle('is-on', lista.length > 0);
+      const barra = document.querySelector('[data-barra]');
+      barra.innerHTML = lista.length ? `Tu servicio · <strong></strong>` : 'Corte desde <strong>$190</strong>';
+      if (lista.length) barra.querySelector('strong').textContent = pesos(total);
+    };
+
+    // ---------- Fechas en hora de Guadalajara ----------
+    const partes = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: ZONA, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(new Date()).map(p => [p.type, p.value]));
+    const hoy = new Date(+partes.year, +partes.month - 1, +partes.day);
+    const ahora = +partes.hour * 60 + +partes.minute;
+    const clave = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const esHoy = d => clave(d) === clave(hoy);
+    const corto = d => d.toLocaleDateString('es-MX', { weekday: 'short' }).replace('.', '');
+    const largo = d => d.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
+    const hhmm = m => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
+
+    // Citas ya apartadas: inventadas pero siempre iguales para el mismo día y barbero
+    const ocupado = (d, barbero, m) => {
+      let h = 2166136261;
+      for (const c of `${clave(d)}|${barbero}|${m}`) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+      return (h >>> 0) % 100 < 28;
+    };
+    const libre = (d, barbero, inicio, dur) => {
+      if (!BARBEROS[barbero].dias.includes(d.getDay())) return false;
+      for (let m = inicio; m < inicio + dur; m += 30) if (ocupado(d, barbero, m - (m % 30))) return false;
+      return true;
+    };
+    // Horas posibles para un día, barbero y duración → [{ m, barbero }]
+    const horasLibres = (d, quien, dur) => {
+      const [abre, cierra] = HORARIO[d.getDay()] || [0, 0];
+      const res = [];
+      for (let m = abre * 60; m + dur <= cierra * 60; m += 30) {
+        if (esHoy(d) && m <= ahora + 30) continue;
+        const candidatos = quien === 'cualquiera' ? Object.keys(BARBEROS) : [quien];
+        const b = candidatos.find(x => libre(d, x, m, dur));
+        if (b) res.push({ m, barbero: b });
+      }
+      return res;
+    };
+
+    // Próximos 6 días que abrimos
+    const DIAS = [];
+    for (let i = 0; DIAS.length < 6 && i < 14; i++) {
+      const d = new Date(hoy); d.setDate(hoy.getDate() + i);
+      if (HORARIO[d.getDay()] && (i > 0 || horasLibres(d, 'cualquiera', 30).length)) DIAS.push(d);
+    }
+
+    // ---------- Agenda ----------
+    const form = document.querySelector('.form');
+    const error = form.querySelector('.form-error');
+    const cajaBarberos = form.querySelector('[data-barberos]');
+    const cajaDias = form.querySelector('[data-dias-form]');
+    const cajaHoras = form.querySelector('[data-horas]');
+    const sinHoras = form.querySelector('[data-sin-horas]');
+    for (const [id, b] of Object.entries(BARBEROS)) {
+      const l = document.createElement('label');
+      l.className = 'chip';
+      l.innerHTML = '<input type="radio" name="barbero" /><span></span>';
+      l.querySelector('input').value = id;
+      l.querySelector('span').textContent = b.nombre;
+      cajaBarberos.append(l);
+    }
+    DIAS.forEach((d, i) => {
+      const l = document.createElement('label');
+      l.className = 'chip chip--day';
+      l.innerHTML = '<input type="radio" name="dia" /><span></span>';
+      l.querySelector('input').value = i;
+      l.querySelector('input').checked = i === 0;
+      l.querySelector('span').textContent = esHoy(d) ? `Hoy ${d.getDate()}` : `${corto(d)} ${d.getDate()}`;
+      cajaDias.append(l);
+    });
+    // Días que trabaja cada barbero, en su tarjeta
+    const nombresDia = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+    document.querySelectorAll('[data-dias]').forEach(p => {
+      const b = BARBEROS[p.dataset.dias];
+      if (b) p.textContent = 'Trabaja: ' + [2, 3, 4, 5, 6, 0].filter(x => b.dias.includes(x)).map(x => nombresDia[x]).join(', ');
+    });
+
+    const duracion = () => Math.max(resumen().minutos, 30);
+    // Valor marcado de un grupo de opciones (funciona aunque solo haya una)
+    const marcado = nombre => form.querySelector(`input[name="${nombre}"]:checked`)?.value ?? '';
+    const marcar = (nombre, valor) => form.querySelectorAll(`input[name="${nombre}"]`).forEach(i => { i.checked = i.value === valor; });
+    let horasActuales = [];
+    const pintarHoras = () => {
+      const d = DIAS[Number(marcado('dia'))];
+      const quien = BARBEROS[marcado('barbero')] ? marcado('barbero') : 'cualquiera';
+      const antes = marcado('hora');
+      horasActuales = d ? horasLibres(d, quien, duracion()) : [];
+      cajaHoras.replaceChildren(...horasActuales.map(({ m }) => {
+        const l = document.createElement('label');
+        l.className = 'time';
+        l.innerHTML = '<input type="radio" name="hora" /><span></span>';
+        l.querySelector('input').value = m;
+        l.querySelector('input').checked = String(m) === antes;
+        l.querySelector('span').textContent = hhmm(m);
+        return l;
+      }));
+      sinHoras.hidden = horasActuales.length > 0;
+    };
+    form.addEventListener('change', e => { if (e.target.name === 'dia' || e.target.name === 'barbero') pintarHoras(); });
+
+    // «Agendar con …» en las tarjetas de barbero
+    document.querySelectorAll('[data-con]').forEach(a => a.addEventListener('click', () => {
+      if (!BARBEROS[a.dataset.con]) return;
+      marcar('barbero', a.dataset.con);
+      pintarHoras();
+    }));
+
+    const limpiar = (texto, max) => texto.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const { lista, hayCombo, total, minutos } = resumen();
+      const d = DIAS[Number(marcado('dia'))];
+      const hora = horasActuales.find(h => String(h.m) === marcado('hora'));
+      const nombre = limpiar(form.nombre.value, 40);
+      if (!lista.length) return (error.innerHTML = 'Elige al menos un servicio. <a href="#servicios">Ver servicios</a>');
+      if (!d || !hora) return (error.textContent = 'Elige día y hora.');
+      if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu silla.'); }
+      error.textContent = '';
+      const con = marcado('barbero') === 'cualquiera' ? `${BARBEROS[hora.barbero].nombre} (el que estaba libre)` : BARBEROS[hora.barbero].nombre;
+      const msg = `Hola Navaja, soy ${nombre}. Quiero agendar:\n• ${lista.map(s => s[1]).join(' + ')}\n• Con ${con}\n• ${largo(d)}, ${hhmm(hora.m)} (${minutos} min aprox.)\n• Total: ${pesos(total)}${hayCombo ? ` (con descuento de combo)` : ''}`;
+      if (window.muestra) return muestra.whatsapp(msg); // plantilla de ejemplo
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+
+    pintarServicio();
+    pintarHoras();
+
+    // Marca el día de hoy en la tabla de horario
+    const dHoy = hoy.getDay();
+    document.querySelector(`.hours tr[data-dia="${[2, 3, 4, 5].includes(dHoy) ? 2 : dHoy}"]`)?.classList.add('is-today');
+
+    // ---------- Efectos al bajar ----------
+    motion.reveal('.eyebrow, .h2, .sub, .tally, .book-photo');
+    motion.stagger('.menu, .works, .barbers, .reviews, .faq');
+
+    // ---------- Barra fija en celular ----------
+    const bar = document.querySelector('.buybar');
+    const hero = document.querySelector('.hero');
+    const agenda = document.querySelector('#agenda');
+    const update = () => {
+      const pastHero = hero.getBoundingClientRect().bottom < 0;
+      const r = agenda.getBoundingClientRect();
+      bar.classList.toggle('show', pastHero && !(r.top < innerHeight && r.bottom > 0));
+    };
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  </script>
+</body>
+</html>

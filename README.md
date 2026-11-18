@@ -10,6 +10,7 @@ carpeta y se puede ver en vivo. Para un cliente real, copia la carpeta de la pla
 - `dental/` — consultorio dental (precios, primera cita, agenda por WhatsApp)
 - `inmobiliaria/` — desarrollo de casas (galería, modelos, calculadora de mensualidad, visitas)
 - `gimnasio/` — gimnasio funcional (horario de clases por día, planes mensual/anual, clase de prueba gratis)
+- `barberia/` — barbería clásica (arma tu servicio con total y duración, barberos, agenda con horarios libres)
 
 Otros archivos:
 
