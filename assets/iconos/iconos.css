@@ -1,8 +1,8 @@
 /* Íconos: Font Awesome Free 6.5.1 (https://fontawesome.com), recortado a los que usa este sitio.
  * Licencia: íconos CC BY 4.0, fuentes SIL OFL 1.1, código MIT. Copyright 2023 Fonticons, Inc.
  * Generado con assets/iconos/actualizar.py; no lo edites a mano. */
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=3bd10297") format("woff2"); }
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=63be9db9") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=d0774641") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=4ff8244c") format("woff2"); }
 @font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: block; src: url("brands.woff2?v=27e3b55a") format("woff2"); }
 
 .fa-solid, .fa-regular, .fa-brands {
@@ -48,6 +48,7 @@
 .fa-lightbulb::before { content: "\f0eb"; }
 .fa-link::before { content: "\f0c1"; }
 .fa-location-dot::before { content: "\f3c5"; }
+.fa-lock::before { content: "\f023"; }
 .fa-paintbrush::before { content: "\f1fc"; }
 .fa-person-swimming::before { content: "\f5c4"; }
 .fa-phone::before { content: "\f095"; }
@@ -57,12 +58,16 @@
 .fa-ruler-combined::before { content: "\f546"; }
 .fa-shield-halved::before { content: "\f3ed"; }
 .fa-shield-heart::before { content: "\e574"; }
+.fa-shower::before { content: "\f2cc"; }
+.fa-snowflake::before { content: "\f2dc"; }
+.fa-square-parking::before { content: "\f540"; }
 .fa-star::before { content: "\f005"; }
 .fa-tooth::before { content: "\f5c9"; }
 .fa-tree::before { content: "\f1bb"; }
 .fa-truck-fast::before { content: "\f48b"; }
 .fa-truck-medical::before { content: "\f0f9"; }
 .fa-umbrella::before { content: "\f0e9"; }
+.fa-user-group::before { content: "\f500"; }
 .fa-utensils::before { content: "\f2e7"; }
 .fa-van-shuttle::before { content: "\f5b6"; }
 .fa-wallet::before { content: "\f555"; }

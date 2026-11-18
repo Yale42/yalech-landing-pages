@@ -9,6 +9,7 @@ carpeta y se puede ver en vivo. Para un cliente real, copia la carpeta de la pla
 - `restaurante/` — restaurante mexicano (menú por pestañas, abierto/cerrado en vivo, reservas por WhatsApp)
 - `dental/` — consultorio dental (precios, primera cita, agenda por WhatsApp)
 - `inmobiliaria/` — desarrollo de casas (galería, modelos, calculadora de mensualidad, visitas)
+- `gimnasio/` — gimnasio funcional (horario de clases por día, planes mensual/anual, clase de prueba gratis)
 
 Otros archivos:
 
