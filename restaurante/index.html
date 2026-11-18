@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <!-- Landing de ejemplo (restaurante ficticio). Fotos de Unsplash, uso libre.
@@ -59,7 +59,7 @@
         <h2 class="h2" id="fav-title">Lo que más se pide</h2>
         <p class="swipe">Desliza →</p>
       </div>
-      <ul class="favs">
+      <ul class="favs" tabindex="0" aria-label="Platillos favoritos (desliza para ver más)">
         <li class="fav">
           <img src="assets/enchiladas.jpg" alt="Plato de enchiladas con crema, arroz y guacamole" loading="lazy" />
           <h3>Enchiladas de mole</h3>
@@ -100,30 +100,30 @@
         <button class="tab" role="tab" aria-selected="false" aria-controls="m-beber" id="t-beber" tabindex="-1">De beber</button>
       </div>
 
-      <ul class="dishes" role="tabpanel" id="m-desayuno" aria-labelledby="t-desayuno">
+      <div class="dishes-panel" role="tabpanel" id="m-desayuno" aria-labelledby="t-desayuno"><ul class="dishes">
         <li class="dish"><div><h3>Chilaquiles rojos o verdes</h3><p>Con huevo, pollo o cecina. Crema, queso y cebolla.</p></div><span>$145</span></li>
         <li class="dish"><div><h3>Huevos al comal</h3><p>Estrellados sobre tortilla, salsa martajada y frijoles de olla.</p></div><span>$130</span></li>
         <li class="dish"><div><h3>Molletes de la casa</h3><p>Pan de masa madre, frijol, queso Oaxaca y pico de gallo.</p></div><span>$115</span></li>
         <li class="dish"><div><h3>Pan dulce del día</h3><p>Concha, oreja o cuernito, horneado a las 7 a. m.</p></div><span>$45</span></li>
-      </ul>
-      <ul class="dishes" role="tabpanel" id="m-comida" aria-labelledby="t-comida" hidden>
+      </ul></div>
+      <div class="dishes-panel" role="tabpanel" id="m-comida" aria-labelledby="t-comida" hidden><ul class="dishes">
         <li class="dish"><div><h3>Enchiladas de mole negro</h3><p>Rellenas de pollo, con ajonjolí y cebolla morada.</p></div><span>$215</span></li>
         <li class="dish"><div><h3>Tacos de camarón</h3><p>Tres piezas, capeados, con col morada y mayonesa de chipotle.</p></div><span>$190</span></li>
         <li class="dish"><div><h3>Pescado a la talla</h3><p>Pesca del día con adobo rojo y verde. Para dos.</p></div><span>$520</span></li>
         <li class="dish"><div><h3>Sopa de tortilla</h3><p>Chile pasilla, aguacate, queso y chicharrón.</p></div><span>$110</span></li>
-      </ul>
-      <ul class="dishes" role="tabpanel" id="m-compartir" aria-labelledby="t-compartir" hidden>
+      </ul></div>
+      <div class="dishes-panel" role="tabpanel" id="m-compartir" aria-labelledby="t-compartir" hidden><ul class="dishes">
         <li class="dish"><div><h3>Guacamole de molcajete</h3><p>Con totopos recién fritos. Chapulines +$40.</p></div><span>$145</span></li>
         <li class="dish"><div><h3>Tostadas de atún</h3><p>Cuatro piezas con aguacate, cebolla frita y salsa macha.</p></div><span>$235</span></li>
         <li class="dish"><div><h3>Quesadillas fritas</h3><p>Seis piezas: flor de calabaza, huitlacoche o queso.</p></div><span>$160</span></li>
         <li class="dish"><div><h3>Queso fundido</h3><p>Con chorizo o champiñones y tortillas de maíz azul.</p></div><span>$170</span></li>
-      </ul>
-      <ul class="dishes" role="tabpanel" id="m-beber" aria-labelledby="t-beber" hidden>
+      </ul></div>
+      <div class="dishes-panel" role="tabpanel" id="m-beber" aria-labelledby="t-beber" hidden><ul class="dishes">
         <li class="dish"><div><h3>Agua del día</h3><p>Jamaica, horchata o la que tengamos de temporada.</p></div><span>$45</span></li>
         <li class="dish"><div><h3>Café de olla</h3><p>Con canela y piloncillo.</p></div><span>$50</span></li>
         <li class="dish"><div><h3>Mezcal espadín</h3><p>De Santiago Matatlán, servido con naranja y sal de gusano.</p></div><span>$120</span></li>
         <li class="dish"><div><h3>Margarita de tamarindo</h3><p>Con chile piquín en la orilla.</p></div><span>$140</span></li>
-      </ul>
+      </ul></div>
     </section>
 
     <!-- ========== Historia ========== -->

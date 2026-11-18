@@ -242,7 +242,7 @@ em { font-style: normal; color: var(--lime); }
 }
 .slot-btn:hover:not(:disabled) { background: var(--lime); }
 .slot-btn:disabled { background: transparent; color: var(--muted); cursor: default; }
-.slot.is-off .slot-time, .slot.is-off .slot-info { opacity: 0.45; }
+.slot.is-off .slot-time, .slot.is-off .slot-info strong, .slot.is-off .slot-info span { color: var(--muted); }
 
 /* Planes */
 .plans-head { display: grid; gap: 20px; }

@@ -422,7 +422,7 @@ img { display: block; max-width: 100%; }
 .hero-text > :nth-child(4) { animation-delay: 0.3s; }
 .hero-text > :nth-child(5) { animation-delay: 0.4s; }
 @keyframes rise { from { opacity: 0; translate: 0 22px; } }
-.dishes:not([hidden]) { animation: fade 0.4s ease both; }
+.dishes-panel:not([hidden]) { animation: fade 0.4s ease both; }
 @keyframes fade { from { opacity: 0; translate: 0 8px; } }
 
 @media (prefers-reduced-motion: reduce) {

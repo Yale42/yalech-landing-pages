@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/iconos/iconos.css?v=6" />
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <!-- Landing de ejemplo (gimnasio ficticio). Fotos de Unsplash, uso libre.
@@ -68,7 +68,7 @@
       <p class="eyebrow">Clases</p>
       <h2 class="h2" id="clases-title">Cuatro formas de moverte</h2>
       <p class="sub">Todas se adaptan a tu nivel. El coach te da la versión fácil o la difícil de cada ejercicio.</p>
-      <ul class="classes">
+      <ul class="classes" tabindex="0" aria-label="Tipos de clase (desliza para ver más)">
         <li class="class-card">
           <img src="assets/c-fuerza.jpg" alt="Hombre levantando una barra con discos rojos" loading="lazy" />
           <div class="class-info">
@@ -111,7 +111,7 @@
       <h2 class="h2" id="horario-title">Elige tu clase de prueba</h2>
       <p class="sub">Toca una clase para apartarla. Los lugares que quedan se actualizan cada día.</p>
       <div class="days" role="tablist" aria-label="Días"></div>
-      <ul class="slots" id="horario-lista" role="tabpanel" aria-live="polite"></ul>
+      <div id="horario-lista" role="tabpanel" aria-live="polite"><ul class="slots"></ul></div>
     </section>
 
     <!-- ========== Planes ========== -->
@@ -365,7 +365,7 @@
 
     // ---------- Horario en pestañas ----------
     const tabs = document.querySelector('.days');
-    const lista = document.querySelector('#horario-lista');
+    const lista = document.querySelector('#horario-lista .slots');
     let diaVisto = 0;
     const pintarHorario = () => {
       const d = DIAS[diaVisto];

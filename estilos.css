@@ -5,7 +5,7 @@
   --muted: #6a645b;
   --line: rgba(14, 15, 16, 0.12);
   --amber: #f2a65a;
-  --amber-text: #b45f17;
+  --amber-text: #9a5113;
 
   --font: "Schibsted Grotesk", system-ui, sans-serif;
   --tracking: -0.03em;
@@ -129,7 +129,7 @@ body {
 
 /* ¿No sabes cuál? → abre el cotizador */
 .help { margin-top: 18px; font-size: 0.95rem; color: var(--muted); animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.55s both; }
-.help a { color: var(--amber-text); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid rgba(180, 95, 23, 0.35); transition: border-color 0.2s ease; }
+.help a { color: var(--amber-text); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid rgba(154, 81, 19, 0.35); transition: border-color 0.2s ease; }
 .help a:hover { border-color: var(--amber-text); }
 
 /* Cotizador (assets/cotizar.css): colores de esta página */

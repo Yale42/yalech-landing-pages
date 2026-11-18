@@ -5,6 +5,7 @@
   --line: rgba(18, 17, 16, 0.12);
   --red: #e5341d;
   --red-soft: #ffe1d9;
+  --red-text: #d02f1a; /* rojo para textos chicos (contraste) */
 
   --font: "Archivo", system-ui, sans-serif;
   --gutter: 20px;
@@ -178,7 +179,7 @@ em { font-style: normal; color: var(--red); }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-text);
 }
 .eyebrow--light { color: #ff8a73; }
 .h2 {
