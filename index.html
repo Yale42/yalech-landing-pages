@@ -24,9 +24,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/iconos/iconos.css?v=6" />
-  <link rel="stylesheet" href="estilos.css?v=6" />
+  <link rel="stylesheet" href="estilos.css?v=10" />
   <link rel="stylesheet" href="assets/cotizar.css?v=1" />
-  <link rel="stylesheet" href="assets/carrusel.css?v=2" />
+  <link rel="stylesheet" href="assets/carrusel.css?v=3" />
 </head>
 <body>
   <!-- Ejemplos de landing pages de yalech. Cada ejemplo vive en su carpeta (curso/, festival/, ceramica/,
@@ -49,20 +49,13 @@
     </ol>
   </header>
 
-  <section class="category" id="landing-pages">
+  <section class="category" id="vender">
     <div class="category-head">
-      <div><h2>Landing pages</h2><p class="category-sub">Una sola página para vender, reservar o agendar citas.</p></div>
+      <div><h2>Para vender</h2><p class="category-sub">Cursos, productos y eventos: que compren o se inscriban.</p></div>
       <p class="swipe-hint">Desliza para ver más →</p>
     </div>
-    <!-- Filtro por tipo. Cada plantilla lleva data-tipo="vender" o "agendar".
-         Se puede compartir ya filtrado: …/?tipo=vender o …/?tipo=agendar -->
-    <div class="filters" role="group" aria-label="Filtrar ejemplos por tipo">
-      <button type="button" data-filtro="todas" aria-pressed="true">Todas <span data-cuantas="todas"></span></button>
-      <button type="button" data-filtro="vender" aria-pressed="false"><i class="fa-solid fa-bag-shopping"></i> Para vender <span data-cuantas="vender"></span></button>
-      <button type="button" data-filtro="agendar" aria-pressed="false"><i class="fa-regular fa-calendar"></i> Citas y reservas <span data-cuantas="agendar"></span></button>
-    </div>
     <div class="grid">
-      <article class="item" data-tipo="vender">
+      <article class="item">
         <a class="phone" href="curso/" target="_blank" rel="noopener" aria-label="Ver landing de curso en vivo">
           <span class="screen"><img src="assets/plantillas/landing-curso.jpg" alt="Landing de un curso en línea" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-curso.webp" /></span>
         </a>
@@ -77,7 +70,7 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="vender">
+      <article class="item">
         <a class="phone" href="ceramica/" target="_blank" rel="noopener" aria-label="Ver landing de producto en vivo">
           <span class="screen"><img src="assets/plantillas/landing-ceramica.jpg" alt="Landing de una marca de cerámica" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-ceramica.webp" /></span>
         </a>
@@ -92,7 +85,7 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="vender">
+      <article class="item">
         <a class="phone" href="festival/" target="_blank" rel="noopener" aria-label="Ver landing de evento en vivo">
           <span class="screen"><img src="assets/plantillas/landing-festival.jpg" alt="Landing de un festival de música" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-festival.webp" /></span>
         </a>
@@ -107,37 +100,7 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="agendar">
-        <a class="phone" href="restaurante/" target="_blank" rel="noopener" aria-label="Ver landing de restaurante en vivo">
-          <span class="screen"><img src="assets/plantillas/landing-restaurante.jpg" alt="Landing de un restaurante mexicano" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-restaurante.webp" /></span>
-        </a>
-        <div class="item-info">
-          <h3 class="item-name">Restaurante</h3>
-          <p class="item-for">Restaurantes, cafés y bares</p>
-          <p class="item-desc">Para llenar mesas con reservas por WhatsApp.</p>
-          <ul class="chips"><li>Menú</li><li>Abierto ahora</li><li>Reservas</li></ul>
-          <div class="item-actions">
-            <a class="btn" href="restaurante/" target="_blank" rel="noopener">Ver en vivo</a>
-            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Restaurante" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20restaurante" target="_blank" rel="noopener">La quiero</a>
-          </div>
-        </div>
-      </article>
-      <article class="item" data-tipo="agendar">
-        <a class="phone" href="dental/" target="_blank" rel="noopener" aria-label="Ver landing de consultorio en vivo">
-          <span class="screen"><img src="assets/plantillas/landing-dental.jpg" alt="Landing de una clínica dental" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-dental.webp" /></span>
-        </a>
-        <div class="item-info">
-          <h3 class="item-name">Consultorio</h3>
-          <p class="item-for">Dentistas, médicos y terapeutas</p>
-          <p class="item-desc">Para que agenden su primera cita.</p>
-          <ul class="chips"><li>Precios</li><li>Equipo</li><li>Citas</li></ul>
-          <div class="item-actions">
-            <a class="btn" href="dental/" target="_blank" rel="noopener">Ver en vivo</a>
-            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Consultorio" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20consultorio" target="_blank" rel="noopener">La quiero</a>
-          </div>
-        </div>
-      </article>
-      <article class="item" data-tipo="vender">
+      <article class="item">
         <a class="phone" href="inmobiliaria/" target="_blank" rel="noopener" aria-label="Ver landing de inmobiliaria en vivo">
           <span class="screen"><img src="assets/plantillas/landing-inmobiliaria.jpg" alt="Landing de un desarrollo de casas" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-inmobiliaria.webp" /></span>
         </a>
@@ -152,7 +115,46 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="agendar">
+    </div>
+  </section>
+
+  <section class="category" id="agendar">
+    <div class="category-head">
+      <div><h2>Para que te agenden o reserven</h2><p class="category-sub">Citas, mesas y servicios sin estar contestando el teléfono.</p></div>
+      <p class="swipe-hint">Desliza para ver más →</p>
+    </div>
+    <div class="grid">
+      <article class="item">
+        <a class="phone" href="restaurante/" target="_blank" rel="noopener" aria-label="Ver landing de restaurante en vivo">
+          <span class="screen"><img src="assets/plantillas/landing-restaurante.jpg" alt="Landing de un restaurante mexicano" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-restaurante.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">Restaurante</h3>
+          <p class="item-for">Restaurantes, cafés y bares</p>
+          <p class="item-desc">Para llenar mesas con reservas por WhatsApp.</p>
+          <ul class="chips"><li>Menú</li><li>Abierto ahora</li><li>Reservas</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="restaurante/" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Restaurante" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20restaurante" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="dental/" target="_blank" rel="noopener" aria-label="Ver landing de consultorio en vivo">
+          <span class="screen"><img src="assets/plantillas/landing-dental.jpg" alt="Landing de una clínica dental" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-dental.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">Consultorio</h3>
+          <p class="item-for">Dentistas, médicos y terapeutas</p>
+          <p class="item-desc">Para que agenden su primera cita.</p>
+          <ul class="chips"><li>Precios</li><li>Equipo</li><li>Citas</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="dental/" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Consultorio" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20consultorio" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
         <a class="phone" href="gimnasio/" target="_blank" rel="noopener" aria-label="Ver landing de gimnasio en vivo">
           <span class="screen"><img src="assets/plantillas/landing-gimnasio.jpg" alt="Landing de un gimnasio funcional" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-gimnasio.webp" /></span>
         </a>
@@ -167,7 +169,7 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="agendar">
+      <article class="item">
         <a class="phone" href="barberia/" target="_blank" rel="noopener" aria-label="Ver landing de barbería en vivo">
           <span class="screen"><img src="assets/plantillas/landing-barberia.jpg" alt="Landing de una barbería clásica" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-barberia.webp" /></span>
         </a>
@@ -182,7 +184,7 @@
           </div>
         </div>
       </article>
-      <article class="item" data-tipo="agendar">
+      <article class="item">
         <a class="phone" href="plomeria/" target="_blank" rel="noopener" aria-label="Ver landing de plomería en vivo">
           <span class="screen"><img src="assets/plantillas/landing-plomeria.jpg" alt="Landing de un servicio de plomería a domicilio" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/landing-plomeria.webp" /></span>
         </a>
@@ -193,7 +195,7 @@
           <ul class="chips"><li>Zonas</li><li>Cotizador</li><li>Urgencias</li></ul>
           <div class="item-actions">
             <a class="btn" href="plomeria/" target="_blank" rel="noopener">Ver en vivo</a>
-            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Plomería" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20servicio%20a%20domicilio" target="_blank" rel="noopener">La quiero</a>
+            <a class="btn btn--solid" data-cotizar="landing" data-ejemplo="Servicio a domicilio" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20una%20landing%20para%20mi%20servicio%20a%20domicilio" target="_blank" rel="noopener">La quiero</a>
           </div>
         </div>
       </article>
@@ -226,34 +228,11 @@
   </aside>
 
   <script src="assets/motion.js"></script>
-  <script src="assets/cotizar.js?v=2"></script>
-  <script src="assets/carrusel.js?v=2"></script>
+  <script src="assets/cotizar.js?v=3"></script>
+  <script src="assets/carrusel.js?v=3"></script>
   <script>
     // Carrusel de ejemplos: flechas, puntitos y una probadita para que se note que se desliza
     document.querySelectorAll('.category .grid').forEach(g => carrusel(g));
-
-    // Filtro por tipo: Todas / Para vender / Citas y reservas
-    const lista = document.querySelector('#landing-pages .grid');
-    const tarjetas = [...lista.querySelectorAll('.item[data-tipo]')];
-    const FILTROS = ['todas', 'vender', 'agendar'];
-    document.querySelectorAll('[data-cuantas]').forEach(s => {
-      const f = s.dataset.cuantas;
-      s.textContent = f === 'todas' ? tarjetas.length : tarjetas.filter(t => t.dataset.tipo === f).length;
-    });
-    const filtrar = (f, { guardar = true } = {}) => {
-      if (!FILTROS.includes(f)) f = 'todas';
-      document.querySelectorAll('[data-filtro]').forEach(b => b.setAttribute('aria-pressed', b.dataset.filtro === f));
-      tarjetas.forEach(t => { t.hidden = f !== 'todas' && t.dataset.tipo !== f; });
-      lista.dispatchEvent(new Event('carrusel:actualizar'));
-      if (guardar) {
-        const url = new URL(location.href);
-        if (f === 'todas') url.searchParams.delete('tipo'); else url.searchParams.set('tipo', f);
-        history.replaceState(null, '', url.pathname + url.search + url.hash);
-      }
-    };
-    document.querySelectorAll('[data-filtro]').forEach(b => b.addEventListener('click', () => filtrar(b.dataset.filtro)));
-    const pedido = new URLSearchParams(location.search).get('tipo');
-    if (FILTROS.includes(pedido)) filtrar(pedido, { guardar: false });
 
     // Aparecen al bajar
     motion.reveal('.category-head, .why-title, .outro-text, .outro .btn');
