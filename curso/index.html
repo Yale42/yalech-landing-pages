@@ -337,7 +337,7 @@
       const grupo = form.grupo.value;
       const pago = form.pago.value;
       const nombre = limpiar(form.nombre.value, 40);
-      if (!GRUPOS.includes(grupo) || !PAGOS.includes(pago)) return (error.textContent = 'Elige grupo y forma de pago.');
+      if (!GRUPOS.includes(grupo) || !PAGOS.includes(pago)) { form.querySelector(GRUPOS.includes(grupo) ? '[name=pago]' : '[name=grupo]')?.focus(); return (error.textContent = 'Elige grupo y forma de pago.'); }
       if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu lugar.'); }
       error.textContent = '';
       const msg = `Hola, soy ${nombre}. Quiero inscribirme al curso Bolsillo.\n• Grupo: ${grupo}\n• Pago: ${pago}`;
@@ -361,5 +361,6 @@
   </script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="landing" data-ejemplo="Curso" data-para="Bolsillo"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

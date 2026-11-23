@@ -423,8 +423,8 @@
       const hora = form.hora ? (form.hora.checked ?? true) && form.hora.value : '';
       const valida = /^\d{4}-\d{2}-\d{2}$/.test(fecha) && fecha >= form.dia.min && fecha <= form.dia.max;
 
-      if (!valida) return (error.textContent = 'Elige un día entre hoy y los próximos 60 días.');
-      if (!libres(fecha).map(h => h + ':00').includes(hora)) return (error.textContent = 'Elige una hora disponible para ese día.');
+      if (!valida) { form.dia.focus(); return (error.textContent = 'Elige un día entre hoy y los próximos 60 días.'); }
+      if (!libres(fecha).map(h => h + ':00').includes(hora)) { form.querySelector('[name=hora]')?.focus(); return (error.textContent = 'Elige una hora disponible para ese día.'); }
       if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar la mesa.'); }
       error.textContent = '';
 
@@ -451,5 +451,6 @@
   </script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="landing" data-ejemplo="Restaurante" data-para="Comal"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

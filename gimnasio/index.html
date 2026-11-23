@@ -523,7 +523,7 @@
       const objetivo = form.objetivo.value;
       const plan = form.plan.value;
       const nombre = limpiar(form.nombre.value, 40);
-      if (!elegida) return (error.textContent = 'Elige día y clase.');
+      if (!elegida) { form.querySelector(form.dia.value ? '[name=clase]' : '[name=dia]')?.focus(); return (error.textContent = 'Elige día y clase.'); }
       if (!OBJETIVOS.includes(objetivo) || !PLANES.includes(plan)) return (error.textContent = 'Revisa tus respuestas.');
       if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu lugar.'); }
       error.textContent = '';
@@ -552,5 +552,6 @@
   </script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="landing" data-ejemplo="Gimnasio" data-para="Brío"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

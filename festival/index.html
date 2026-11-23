@@ -375,7 +375,7 @@
       e.preventDefault();
       const nombre = limpiar(pedido.nombre.value, 40);
       const lineas = filas.filter(f => cant[f.dataset.item] > 0);
-      if (!(cant.general > 0 || cant.vip > 0)) return (error.textContent = 'Agrega al menos un boleto General o VIP.');
+      if (!(cant.general > 0 || cant.vip > 0)) { document.querySelector('[data-item=general] [data-paso="1"]')?.focus(); return (error.textContent = 'Agrega al menos un boleto General o VIP.'); }
       if (nombre.length < 2) { pedido.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar los boletos.'); }
       error.textContent = '';
       const total = lineas.reduce((t, f) => t + cant[f.dataset.item] * Number(f.dataset.precio), 0);
@@ -402,5 +402,6 @@
   </script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="landing" data-ejemplo="Evento" data-para="Marea Fest 2027"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

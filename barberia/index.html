@@ -490,7 +490,7 @@
       const hora = horasActuales.find(h => String(h.m) === marcado('hora'));
       const nombre = limpiar(form.nombre.value, 40);
       if (!lista.length) return (error.innerHTML = 'Elige al menos un servicio. <a href="#servicios">Ver servicios</a>');
-      if (!d || !hora) return (error.textContent = 'Elige día y hora.');
+      if (!d || !hora) { form.querySelector(d ? '[name=hora]' : '[name=dia]')?.focus(); return (error.textContent = 'Elige día y hora.'); }
       if (nombre.length < 2) { form.nombre.focus(); return (error.textContent = 'Escribe tu nombre para apartar tu silla.'); }
       error.textContent = '';
       const con = marcado('barbero') === 'cualquiera' ? `${BARBEROS[hora.barbero].nombre} (el que estaba libre)` : BARBEROS[hora.barbero].nombre;
@@ -525,5 +525,6 @@
   </script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="landing" data-ejemplo="Barbería" data-para="Navaja"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>
