@@ -1,8 +1,8 @@
 /* Íconos: Font Awesome Free 6.5.1 (https://fontawesome.com), recortado a los que usa este sitio.
  * Licencia: íconos CC BY 4.0, fuentes SIL OFL 1.1, código MIT. Copyright 2023 Fonticons, Inc.
  * Generado con assets/iconos/actualizar.py; no lo edites a mano. */
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=4775dbd0") format("woff2"); }
-@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=02f13f34") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: block; src: url("solid.woff2?v=406b373f") format("woff2"); }
+@font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 400; font-display: block; src: url("regular.woff2?v=e6daecca") format("woff2"); }
 @font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: block; src: url("brands.woff2?v=27e3b55a") format("woff2"); }
 
 .fa-solid, .fa-regular, .fa-brands {
@@ -23,7 +23,6 @@
 .fa-bicycle::before { content: "\f206"; }
 .fa-bolt::before { content: "\f0e7"; }
 .fa-box-open::before { content: "\f49e"; }
-.fa-calendar::before { content: "\f133"; }
 .fa-campground::before { content: "\f6bb"; }
 .fa-car::before { content: "\f1b9"; }
 .fa-check::before { content: "\f00c"; }
@@ -40,7 +39,6 @@
 .fa-droplet::before { content: "\f043"; }
 .fa-dumbbell::before { content: "\f44b"; }
 .fa-envelope-open-text::before { content: "\f658"; }
-.fa-eye::before { content: "\f06e"; }
 .fa-face-smile-beam::before { content: "\f5b8"; }
 .fa-faucet-drip::before { content: "\e006"; }
 .fa-file-invoice::before { content: "\f570"; }

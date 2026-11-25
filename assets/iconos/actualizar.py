@@ -48,7 +48,13 @@ def main(paquete: pathlib.Path) -> None:
     if faltan:
         print('Ojo, estos no son íconos de Font Awesome 6.5.1:', ', '.join(faltan))
 
-    unicodes = sorted({int(codigos[n], 16) for n in usados})
+    # Íconos que pone el CSS con content: "\f0c4" (p. ej. ::before/::after); no tienen clase
+    en_css = set()
+    for f in RAIZ.rglob('*.css'):
+        if SALIDA not in f.parents and '.git' not in f.parts:
+            en_css |= set(re.findall(r'content:\s*["\']\\(f[0-9a-f]{3})["\']', f.read_text(errors='ignore')))
+
+    unicodes = sorted({int(codigos[n], 16) for n in usados} | {int(c, 16) for c in en_css})
     caras = []
     for origen, (familia, peso, destino) in FUENTES.items():
         op = subset.Options()
@@ -83,7 +89,7 @@ def main(paquete: pathlib.Path) -> None:
 
 {reglas}
 """)
-    print(f'{len(usados)} íconos →', ', '.join(f'{d}: {(SALIDA / d).stat().st_size // 1024} KB' for *_, d in FUENTES.values()))
+    print(f'{len(usados)} íconos (+{len(en_css)} desde CSS) →', ', '.join(f'{d}: {(SALIDA / d).stat().st_size // 1024} KB' for *_, d in FUENTES.values()))
 
 
 if __name__ == '__main__':
