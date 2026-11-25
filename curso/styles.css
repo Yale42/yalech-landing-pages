@@ -23,8 +23,17 @@ body {
 }
 img { display: block; max-width: 100%; }
 
-/* Títulos condensados tipo cartel */
+/* Títulos condensados tipo cartel. Usan «Archivo Cartel»: Archivo ya fijo en ancho 68% y grosor 850,
+   solo mayúsculas, números y signos (5 KB). Llega antes que la Archivo completa (90 KB), así el título
+   no brinca al cambiar de letra en conexiones lentas. Se hizo con fontTools (instancer + subset). */
+@font-face {
+  font-family: 'Archivo Cartel';
+  font-weight: 850;
+  font-display: swap;
+  src: url(../assets/fuentes/archivo-cartel.woff2) format('woff2');
+}
 .title, .h2, .price-title, .price-amount, .outro-title, .logo, .wk, .facts strong {
+  font-family: 'Archivo Cartel', var(--font);
   font-stretch: 68%;
   font-weight: 850;
   text-transform: uppercase;
@@ -55,6 +64,7 @@ em { font-style: normal; color: var(--red); }
 .logo span { color: var(--red); font-size: 0.7em; vertical-align: super; }
 .topbar-cta {
   padding: 9px 16px;
+  line-height: 1.09; /* fijo (el mismo que da Archivo): así no cambia de alto mientras llega la tipografía */
   border-radius: 999px;
   background: var(--ink);
   color: var(--paper);
@@ -370,6 +380,7 @@ em { font-style: normal; color: var(--red); }
 }
 .price-amount > span { font-size: 0.45em; margin-top: 0.12em; color: var(--red); }
 .price-amount small {
+  font-family: var(--font);
   flex-basis: 100%;
   margin-top: 10px;
   font-stretch: 100%;
